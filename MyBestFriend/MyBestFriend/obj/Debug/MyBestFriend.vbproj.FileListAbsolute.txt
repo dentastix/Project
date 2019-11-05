@@ -1,0 +1,13 @@
+H:\1st Year\MyBestFriend\MyBestFriend\bin\Debug\MyBestFriend.exe.config
+H:\1st Year\MyBestFriend\MyBestFriend\bin\Debug\MyBestFriend.exe
+H:\1st Year\MyBestFriend\MyBestFriend\bin\Debug\MyBestFriend.pdb
+H:\1st Year\MyBestFriend\MyBestFriend\bin\Debug\MyBestFriend.xml
+H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.vbprojAssemblyReference.cache
+H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.Resources.resources
+H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.vbproj.GenerateResource.cache
+H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.vbproj.CoreCompileInputs.cache
+H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.exe
+H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.xml
+H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.pdb
+H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.frmLogin.resources
+H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.frmAnimal.resources
