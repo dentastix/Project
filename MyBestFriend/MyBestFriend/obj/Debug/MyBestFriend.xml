@@ -62,6 +62,11 @@ MyBestFriend
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:MyBestFriend.My.Resources.Resources.p">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:MyBestFriend.My.Resources.Resources.Picture2">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

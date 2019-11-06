@@ -76,7 +76,7 @@ Partial Class frmLogin
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(75, 23)
         Me.btnLogin.TabIndex = 5
-        Me.btnLogin.Text = "Login"
+        Me.btnLogin.Text = "L&ogin"
         Me.btnLogin.UseVisualStyleBackColor = True
         '
         'frmLogin
@@ -91,6 +91,8 @@ Partial Class frmLogin
         Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.picLogo)
         Me.HelpButton = True
+        Me.MaximumSize = New System.Drawing.Size(460, 472)
+        Me.MinimumSize = New System.Drawing.Size(460, 472)
         Me.Name = "frmLogin"
         Me.Text = "Login Page"
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()

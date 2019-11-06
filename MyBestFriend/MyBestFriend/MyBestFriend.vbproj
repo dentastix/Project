@@ -158,5 +158,8 @@
   <ItemGroup>
     <None Include="Resources\nuhy.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
