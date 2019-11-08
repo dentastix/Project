@@ -72,12 +72,13 @@ Partial Class frmLogin
         '
         'btnLogin
         '
+        Me.btnLogin.BackColor = System.Drawing.Color.White
         Me.btnLogin.Location = New System.Drawing.Point(180, 336)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(75, 23)
         Me.btnLogin.TabIndex = 5
         Me.btnLogin.Text = "L&ogin"
-        Me.btnLogin.UseVisualStyleBackColor = True
+        Me.btnLogin.UseVisualStyleBackColor = False
         '
         'frmLogin
         '

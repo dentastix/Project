@@ -24,6 +24,7 @@ Partial Class frmAnimal
     Private Sub InitializeComponent()
         Me.lblAnimal = New System.Windows.Forms.Label()
         Me.gboAnimal = New System.Windows.Forms.GroupBox()
+        Me.btnNext = New System.Windows.Forms.Button()
         Me.picInsurance = New System.Windows.Forms.PictureBox()
         Me.radDog = New System.Windows.Forms.RadioButton()
         Me.radCat = New System.Windows.Forms.RadioButton()
@@ -34,8 +35,8 @@ Partial Class frmAnimal
         Me.radEssential = New System.Windows.Forms.RadioButton()
         Me.picLogo = New System.Windows.Forms.PictureBox()
         Me.txtDescription = New System.Windows.Forms.TextBox()
-        Me.btnNext = New System.Windows.Forms.Button()
         Me.btnContinue = New System.Windows.Forms.Button()
+        Me.lblPrompt = New System.Windows.Forms.Label()
         Me.gboAnimal.SuspendLayout()
         CType(Me.picInsurance, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gboInsurance.SuspendLayout()
@@ -67,6 +68,16 @@ Partial Class frmAnimal
         Me.gboAnimal.TabIndex = 1
         Me.gboAnimal.TabStop = False
         Me.gboAnimal.Text = "Pet Selection"
+        '
+        'btnNext
+        '
+        Me.btnNext.BackColor = System.Drawing.Color.White
+        Me.btnNext.Location = New System.Drawing.Point(13, 127)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(75, 23)
+        Me.btnNext.TabIndex = 4
+        Me.btnNext.Text = "Next"
+        Me.btnNext.UseVisualStyleBackColor = False
         '
         'picInsurance
         '
@@ -109,6 +120,7 @@ Partial Class frmAnimal
         Me.gboInsurance.Controls.Add(Me.radPlus)
         Me.gboInsurance.Controls.Add(Me.radPremier)
         Me.gboInsurance.Controls.Add(Me.radEssential)
+        Me.gboInsurance.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gboInsurance.Location = New System.Drawing.Point(12, 190)
         Me.gboInsurance.Name = "gboInsurance"
         Me.gboInsurance.Size = New System.Drawing.Size(294, 173)
@@ -184,23 +196,26 @@ Partial Class frmAnimal
         Me.txtDescription.Size = New System.Drawing.Size(397, 162)
         Me.txtDescription.TabIndex = 4
         '
-        'btnNext
-        '
-        Me.btnNext.Location = New System.Drawing.Point(13, 127)
-        Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(75, 23)
-        Me.btnNext.TabIndex = 4
-        Me.btnNext.Text = "Next"
-        Me.btnNext.UseVisualStyleBackColor = True
-        '
         'btnContinue
         '
-        Me.btnContinue.Location = New System.Drawing.Point(697, 397)
+        Me.btnContinue.BackColor = System.Drawing.Color.White
+        Me.btnContinue.Location = New System.Drawing.Point(697, 383)
         Me.btnContinue.Name = "btnContinue"
         Me.btnContinue.Size = New System.Drawing.Size(75, 23)
         Me.btnContinue.TabIndex = 5
         Me.btnContinue.Text = "Continue"
-        Me.btnContinue.UseVisualStyleBackColor = True
+        Me.btnContinue.UseVisualStyleBackColor = False
+        '
+        'lblPrompt
+        '
+        Me.lblPrompt.AutoSize = True
+        Me.lblPrompt.BackColor = System.Drawing.Color.Transparent
+        Me.lblPrompt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrompt.Location = New System.Drawing.Point(375, 184)
+        Me.lblPrompt.Name = "lblPrompt"
+        Me.lblPrompt.Size = New System.Drawing.Size(49, 15)
+        Me.lblPrompt.TabIndex = 6
+        Me.lblPrompt.Text = "Prompt"
         '
         'frmAnimal
         '
@@ -208,7 +223,8 @@ Partial Class frmAnimal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImage = Global.MyBestFriend.My.Resources.Resources.white_mint_gradient_background_vector_8346120
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 429)
+        Me.Controls.Add(Me.lblPrompt)
         Me.Controls.Add(Me.btnContinue)
         Me.Controls.Add(Me.txtDescription)
         Me.Controls.Add(Me.picLogo)
@@ -241,4 +257,5 @@ Partial Class frmAnimal
     Friend WithEvents txtDescription As TextBox
     Friend WithEvents btnNext As Button
     Friend WithEvents btnContinue As Button
+    Friend WithEvents lblPrompt As Label
 End Class

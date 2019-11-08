@@ -11,3 +11,9 @@ H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.xml
 H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.pdb
 H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.frmLogin.resources
 H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.frmAnimal.resources
+H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.frmDogPremier.resources
+H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.frmDogEssential.resources
+H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.frmDogPlus.resources
+H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.frmCatPlus.resources
+H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.frmCatEssential.resources
+H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.frmCatPremier.resources

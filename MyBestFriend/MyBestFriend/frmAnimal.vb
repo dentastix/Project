@@ -4,16 +4,35 @@
         gboInsurance.Visible = False
         txtDescription.Visible = False
         btnContinue.Visible = False
-
+        lblPrompt.Visible = False
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
         gboInsurance.Visible = True
         txtDescription.Visible = True
+        lblPrompt.Visible = True
     End Sub
 
     Private Sub btnContinue_Click(sender As Object, e As EventArgs) Handles btnContinue.Click
-
+        If radDog.Checked And radEssential.Checked Then
+            Me.Visible = False
+            frmDogEssential.Visible = True
+        ElseIf radDog.Checked And radPremier.Checked Then
+            Me.Visible = False
+            frmDogPremier.Visible = True
+        ElseIf radDog.Checked And radPlus.Checked Then
+            Me.Visible = False
+            frmDogPlus.Visible = True
+        ElseIf radCat.Checked And radEssential.Checked Then
+            Me.Visible = False
+            frmCatEssential.Visible = True
+        ElseIf radCat.Checked And radPremier.Checked Then
+            Me.Visible = False
+            frmCatPremier.Visible = True
+        ElseIf radCat.Checked And radPlus.Checked Then
+            Me.Visible = False
+            frmCatPlus.Visible = True
+        End If
     End Sub
 
     Private Sub radEssential_CheckedChanged(sender As Object, e As EventArgs) Handles radEssential.CheckedChanged
@@ -45,4 +64,5 @@
             txtDescription.Text = txtDescription.Text & " cover will reinstate at renewal and all eligible conditions will continue to be covered up to the vet fee limit."
         End If
     End Sub
+
 End Class
