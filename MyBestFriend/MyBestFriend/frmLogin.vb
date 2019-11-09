@@ -11,6 +11,7 @@
         'If the correct password is entered, then the sign in is successful and proceed into next form
         If strPassword = "BIS" Then
             MsgBox("Welcome User, You have successfully logged in!")
+            'When button clicked go from this form to the next form
             Me.Visible = False
             frmAnimal.Visible = True
         Else
@@ -18,8 +19,6 @@
             MsgBox("Password Incorrect! Please Try Again :)")
             'Clear the previous incorrect password
             txtPassword.Text = ""
-            Me.Visible = True
-            frmAnimal.Visible = False
             'Cursor goes straight back to where password is entered for ease of use
             txtPassword.Focus()
         End If
