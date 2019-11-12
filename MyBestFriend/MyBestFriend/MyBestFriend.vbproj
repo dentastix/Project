@@ -73,42 +73,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmCatPlus.Designer.vb">
-      <DependentUpon>frmCatPlus.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmCatPlus.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCatPremier.Designer.vb">
-      <DependentUpon>frmCatPremier.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmCatPremier.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCatEssential.Designer.vb">
-      <DependentUpon>frmCatEssential.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmCatEssential.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDogPlus.Designer.vb">
-      <DependentUpon>frmDogPlus.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmDogPlus.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDogPremier.Designer.vb">
-      <DependentUpon>frmDogPremier.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmDogPremier.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDogEssential.Designer.vb">
-      <DependentUpon>frmDogEssential.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmDogEssential.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmAnimal.Designer.vb">
       <DependentUpon>frmAnimal.vb</DependentUpon>
     </Compile>
@@ -139,24 +103,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmCatPlus.resx">
-      <DependentUpon>frmCatPlus.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCatEssential.resx">
-      <DependentUpon>frmCatEssential.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCatPremier.resx">
-      <DependentUpon>frmCatPremier.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDogPlus.resx">
-      <DependentUpon>frmDogPlus.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDogPremier.resx">
-      <DependentUpon>frmDogPremier.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDogEssential.resx">
-      <DependentUpon>frmDogEssential.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmAnimal.resx">
       <DependentUpon>frmAnimal.vb</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +160,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\p.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2113304-soft-blue-and-white-gradient-background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

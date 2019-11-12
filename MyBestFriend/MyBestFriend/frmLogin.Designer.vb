@@ -95,6 +95,7 @@ Partial Class frmLogin
         Me.MaximumSize = New System.Drawing.Size(460, 472)
         Me.MinimumSize = New System.Drawing.Size(460, 472)
         Me.Name = "frmLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login Page"
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
