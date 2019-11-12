@@ -38,6 +38,8 @@ Partial Class frmAnimal
         Me.btnContinue = New System.Windows.Forms.Button()
         Me.lblPrompt = New System.Windows.Forms.Label()
         Me.gboBreedDog = New System.Windows.Forms.GroupBox()
+        Me.lblOtherDog = New System.Windows.Forms.Label()
+        Me.txtOtherDog = New System.Windows.Forms.TextBox()
         Me.cboMixedDog = New System.Windows.Forms.ComboBox()
         Me.cboCrossbreedDog = New System.Windows.Forms.ComboBox()
         Me.cboPedigreeDog = New System.Windows.Forms.ComboBox()
@@ -45,12 +47,14 @@ Partial Class frmAnimal
         Me.radCrossbreedDog = New System.Windows.Forms.RadioButton()
         Me.radPedigreeDog = New System.Windows.Forms.RadioButton()
         Me.gboBreedCat = New System.Windows.Forms.GroupBox()
-        Me.radPedigreeCat = New System.Windows.Forms.RadioButton()
-        Me.radCrossbreedCat = New System.Windows.Forms.RadioButton()
-        Me.radMixedCat = New System.Windows.Forms.RadioButton()
-        Me.cboPedigreeCat = New System.Windows.Forms.ComboBox()
-        Me.cboCrossbreedCat = New System.Windows.Forms.ComboBox()
+        Me.lblOtherCat = New System.Windows.Forms.Label()
+        Me.txtOtherCat = New System.Windows.Forms.TextBox()
         Me.cboMixedCat = New System.Windows.Forms.ComboBox()
+        Me.cboCrossbreedCat = New System.Windows.Forms.ComboBox()
+        Me.cboPedigreeCat = New System.Windows.Forms.ComboBox()
+        Me.radMixedCat = New System.Windows.Forms.RadioButton()
+        Me.radCrossbreedCat = New System.Windows.Forms.RadioButton()
+        Me.radPedigreeCat = New System.Windows.Forms.RadioButton()
         Me.gboAnimal.SuspendLayout()
         CType(Me.picInsurance, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gboInsurance.SuspendLayout()
@@ -215,7 +219,7 @@ Partial Class frmAnimal
         'btnContinue
         '
         Me.btnContinue.BackColor = System.Drawing.Color.White
-        Me.btnContinue.Location = New System.Drawing.Point(697, 371)
+        Me.btnContinue.Location = New System.Drawing.Point(226, 363)
         Me.btnContinue.Name = "btnContinue"
         Me.btnContinue.Size = New System.Drawing.Size(75, 23)
         Me.btnContinue.TabIndex = 5
@@ -236,6 +240,8 @@ Partial Class frmAnimal
         'gboBreedDog
         '
         Me.gboBreedDog.BackColor = System.Drawing.Color.Transparent
+        Me.gboBreedDog.Controls.Add(Me.lblOtherDog)
+        Me.gboBreedDog.Controls.Add(Me.txtOtherDog)
         Me.gboBreedDog.Controls.Add(Me.cboMixedDog)
         Me.gboBreedDog.Controls.Add(Me.cboCrossbreedDog)
         Me.gboBreedDog.Controls.Add(Me.cboPedigreeDog)
@@ -249,6 +255,28 @@ Partial Class frmAnimal
         Me.gboBreedDog.TabIndex = 7
         Me.gboBreedDog.TabStop = False
         Me.gboBreedDog.Text = "Step 3: Select your breed of Dog"
+        '
+        'lblOtherDog
+        '
+        Me.lblOtherDog.AutoSize = True
+        Me.lblOtherDog.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOtherDog.Location = New System.Drawing.Point(363, 19)
+        Me.lblOtherDog.Name = "lblOtherDog"
+        Me.lblOtherDog.Size = New System.Drawing.Size(43, 15)
+        Me.lblOtherDog.TabIndex = 7
+        Me.lblOtherDog.Text = "Other:"
+        Me.lblOtherDog.Visible = False
+        '
+        'txtOtherDog
+        '
+        Me.txtOtherDog.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOtherDog.Location = New System.Drawing.Point(363, 35)
+        Me.txtOtherDog.Multiline = True
+        Me.txtOtherDog.Name = "txtOtherDog"
+        Me.txtOtherDog.Size = New System.Drawing.Size(170, 64)
+        Me.txtOtherDog.TabIndex = 6
+        Me.txtOtherDog.Text = "Type of Breed:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Breed:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Weight:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.txtOtherDog.Visible = False
         '
         'cboMixedDog
         '
@@ -322,6 +350,8 @@ Partial Class frmAnimal
         'gboBreedCat
         '
         Me.gboBreedCat.BackColor = System.Drawing.Color.Transparent
+        Me.gboBreedCat.Controls.Add(Me.lblOtherCat)
+        Me.gboBreedCat.Controls.Add(Me.txtOtherCat)
         Me.gboBreedCat.Controls.Add(Me.cboMixedCat)
         Me.gboBreedCat.Controls.Add(Me.cboCrossbreedCat)
         Me.gboBreedCat.Controls.Add(Me.cboPedigreeCat)
@@ -329,36 +359,67 @@ Partial Class frmAnimal
         Me.gboBreedCat.Controls.Add(Me.radCrossbreedCat)
         Me.gboBreedCat.Controls.Add(Me.radPedigreeCat)
         Me.gboBreedCat.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gboBreedCat.Location = New System.Drawing.Point(12, 527)
+        Me.gboBreedCat.Location = New System.Drawing.Point(12, 400)
         Me.gboBreedCat.Name = "gboBreedCat"
         Me.gboBreedCat.Size = New System.Drawing.Size(760, 108)
         Me.gboBreedCat.TabIndex = 8
         Me.gboBreedCat.TabStop = False
         Me.gboBreedCat.Text = "Step 3: Select your breed of Cat"
         '
-        'radPedigreeCat
+        'lblOtherCat
         '
-        Me.radPedigreeCat.AutoSize = True
-        Me.radPedigreeCat.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radPedigreeCat.Location = New System.Drawing.Point(9, 25)
-        Me.radPedigreeCat.Name = "radPedigreeCat"
-        Me.radPedigreeCat.Size = New System.Drawing.Size(92, 19)
-        Me.radPedigreeCat.TabIndex = 0
-        Me.radPedigreeCat.TabStop = True
-        Me.radPedigreeCat.Text = "Pedigree Cat"
-        Me.radPedigreeCat.UseVisualStyleBackColor = True
+        Me.lblOtherCat.AutoSize = True
+        Me.lblOtherCat.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOtherCat.Location = New System.Drawing.Point(363, 20)
+        Me.lblOtherCat.Name = "lblOtherCat"
+        Me.lblOtherCat.Size = New System.Drawing.Size(43, 15)
+        Me.lblOtherCat.TabIndex = 7
+        Me.lblOtherCat.Text = "Other:"
+        Me.lblOtherCat.Visible = False
         '
-        'radCrossbreedCat
+        'txtOtherCat
         '
-        Me.radCrossbreedCat.AutoSize = True
-        Me.radCrossbreedCat.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radCrossbreedCat.Location = New System.Drawing.Point(9, 53)
-        Me.radCrossbreedCat.Name = "radCrossbreedCat"
-        Me.radCrossbreedCat.Size = New System.Drawing.Size(105, 19)
-        Me.radCrossbreedCat.TabIndex = 1
-        Me.radCrossbreedCat.TabStop = True
-        Me.radCrossbreedCat.Text = "Crossbreed Cat"
-        Me.radCrossbreedCat.UseVisualStyleBackColor = True
+        Me.txtOtherCat.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOtherCat.Location = New System.Drawing.Point(363, 38)
+        Me.txtOtherCat.Multiline = True
+        Me.txtOtherCat.Name = "txtOtherCat"
+        Me.txtOtherCat.Size = New System.Drawing.Size(170, 64)
+        Me.txtOtherCat.TabIndex = 6
+        Me.txtOtherCat.Text = "Type of Breed:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Breed:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Weight:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.txtOtherCat.Visible = False
+        '
+        'cboMixedCat
+        '
+        Me.cboMixedCat.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboMixedCat.FormattingEnabled = True
+        Me.cboMixedCat.Items.AddRange(New Object() {"Moggie", "Domestic Longhair", "Domestic Shorthair", "Foreign Shorthairs", "Other"})
+        Me.cboMixedCat.Location = New System.Drawing.Point(178, 78)
+        Me.cboMixedCat.Name = "cboMixedCat"
+        Me.cboMixedCat.Size = New System.Drawing.Size(158, 23)
+        Me.cboMixedCat.TabIndex = 5
+        Me.cboMixedCat.Visible = False
+        '
+        'cboCrossbreedCat
+        '
+        Me.cboCrossbreedCat.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboCrossbreedCat.FormattingEnabled = True
+        Me.cboCrossbreedCat.Items.AddRange(New Object() {"American Curl", "Blue Tabby", "Cornish Rex", "Exotic Shorthair", "Maine Coon", "Scottish Folds", "Snow Leopard Bengal", "Cat", "Turkish Van Cat", "Other"})
+        Me.cboCrossbreedCat.Location = New System.Drawing.Point(178, 50)
+        Me.cboCrossbreedCat.Name = "cboCrossbreedCat"
+        Me.cboCrossbreedCat.Size = New System.Drawing.Size(158, 23)
+        Me.cboCrossbreedCat.TabIndex = 4
+        Me.cboCrossbreedCat.Visible = False
+        '
+        'cboPedigreeCat
+        '
+        Me.cboPedigreeCat.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboPedigreeCat.FormattingEnabled = True
+        Me.cboPedigreeCat.Items.AddRange(New Object() {"Angora", "Burmese", "Cymric", "Devon Rex", "Egyptian Mau", "Forest Cat", "Havana", "Japanese Bobtail", "Korat", "Manx", "Nebelung", "Oriental", "Persian", "Ragdoll", "Siamese", "Tiffany", "Other"})
+        Me.cboPedigreeCat.Location = New System.Drawing.Point(178, 22)
+        Me.cboPedigreeCat.Name = "cboPedigreeCat"
+        Me.cboPedigreeCat.Size = New System.Drawing.Size(158, 23)
+        Me.cboPedigreeCat.TabIndex = 3
+        Me.cboPedigreeCat.Visible = False
         '
         'radMixedCat
         '
@@ -372,38 +433,29 @@ Partial Class frmAnimal
         Me.radMixedCat.Text = "Mixed Breed Cat"
         Me.radMixedCat.UseVisualStyleBackColor = True
         '
-        'cboPedigreeCat
+        'radCrossbreedCat
         '
-        Me.cboPedigreeCat.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboPedigreeCat.FormattingEnabled = True
-        Me.cboPedigreeCat.Items.AddRange(New Object() {"Angora", "Burmese", "Cymric", "Devon Rex", "Egyptian Mau", "Forest Cat", "Havana", "Japanese Bobtail", "Korat", "Manx", "Nebelung", "Oriental", "Persian", "Ragdoll", "Siamese", "Tiffany", "Other"})
-        Me.cboPedigreeCat.Location = New System.Drawing.Point(178, 22)
-        Me.cboPedigreeCat.Name = "cboPedigreeCat"
-        Me.cboPedigreeCat.Size = New System.Drawing.Size(158, 23)
-        Me.cboPedigreeCat.TabIndex = 3
-        Me.cboPedigreeCat.Visible = False
+        Me.radCrossbreedCat.AutoSize = True
+        Me.radCrossbreedCat.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radCrossbreedCat.Location = New System.Drawing.Point(9, 53)
+        Me.radCrossbreedCat.Name = "radCrossbreedCat"
+        Me.radCrossbreedCat.Size = New System.Drawing.Size(105, 19)
+        Me.radCrossbreedCat.TabIndex = 1
+        Me.radCrossbreedCat.TabStop = True
+        Me.radCrossbreedCat.Text = "Crossbreed Cat"
+        Me.radCrossbreedCat.UseVisualStyleBackColor = True
         '
-        'cboCrossbreedCat
+        'radPedigreeCat
         '
-        Me.cboCrossbreedCat.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboCrossbreedCat.FormattingEnabled = True
-        Me.cboCrossbreedCat.Items.AddRange(New Object() {"American Curl", "Blue Tabby", "Cornish Rex", "Exotic Shorthair", "Maine Coon", "Scottish Folds", "Snow Leopard Bengal", "Cat", "Turkish Van Cat", "Other"})
-        Me.cboCrossbreedCat.Location = New System.Drawing.Point(178, 50)
-        Me.cboCrossbreedCat.Name = "cboCrossbreedCat"
-        Me.cboCrossbreedCat.Size = New System.Drawing.Size(158, 23)
-        Me.cboCrossbreedCat.TabIndex = 4
-        Me.cboCrossbreedCat.Visible = False
-        '
-        'cboMixedCat
-        '
-        Me.cboMixedCat.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboMixedCat.FormattingEnabled = True
-        Me.cboMixedCat.Items.AddRange(New Object() {"Moggie", "Domestic Longhair", "Domestic Shorthair", "Foreign Shorthairs", "Other"})
-        Me.cboMixedCat.Location = New System.Drawing.Point(178, 78)
-        Me.cboMixedCat.Name = "cboMixedCat"
-        Me.cboMixedCat.Size = New System.Drawing.Size(158, 23)
-        Me.cboMixedCat.TabIndex = 5
-        Me.cboMixedCat.Visible = False
+        Me.radPedigreeCat.AutoSize = True
+        Me.radPedigreeCat.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radPedigreeCat.Location = New System.Drawing.Point(9, 25)
+        Me.radPedigreeCat.Name = "radPedigreeCat"
+        Me.radPedigreeCat.Size = New System.Drawing.Size(92, 19)
+        Me.radPedigreeCat.TabIndex = 0
+        Me.radPedigreeCat.TabStop = True
+        Me.radPedigreeCat.Text = "Pedigree Cat"
+        Me.radPedigreeCat.UseVisualStyleBackColor = True
         '
         'frmAnimal
         '
@@ -467,4 +519,8 @@ Partial Class frmAnimal
     Friend WithEvents cboPedigreeCat As ComboBox
     Friend WithEvents cboMixedCat As ComboBox
     Friend WithEvents cboCrossbreedCat As ComboBox
+    Friend WithEvents lblOtherDog As Label
+    Friend WithEvents txtOtherDog As TextBox
+    Friend WithEvents txtOtherCat As TextBox
+    Friend WithEvents lblOtherCat As Label
 End Class

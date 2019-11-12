@@ -65,6 +65,8 @@
         cboMixedDog.Visible = False
         cboCrossbreedDog.Visible = False
         cboPedigreeDog.Visible = False
+        txtOtherDog.Visible = False
+        lblOtherDog.Visible = False
     End Sub
 
     Private Sub radPedigree_CheckedChanged(sender As Object, e As EventArgs) Handles radPedigreeDog.CheckedChanged
@@ -89,21 +91,29 @@
         cboCrossbreedCat.Visible = False
         cboMixedCat.Visible = False
         cboPedigreeCat.Visible = False
+        lblOtherCat.Visible = False
+
     End Sub
 
     Private Sub radPedigreeCat_CheckedChanged(sender As Object, e As EventArgs) Handles radPedigreeCat.CheckedChanged
+        lblOtherCat.Visible = False
+        txtOtherCat.Visible = False
         cboPedigreeCat.Visible = True
         cboCrossbreedCat.Visible = False
         cboMixedCat.Visible = False
     End Sub
 
     Private Sub radCrossbreedCat_CheckedChanged(sender As Object, e As EventArgs) Handles radCrossbreedCat.CheckedChanged
+        lblOtherCat.Visible = False
+        txtOtherCat.Visible = False
         cboCrossbreedCat.Visible = True
         cboPedigreeCat.Visible = False
         cboMixedCat.Visible = False
     End Sub
 
     Private Sub radMixedCat_CheckedChanged(sender As Object, e As EventArgs) Handles radMixedCat.CheckedChanged
+        lblOtherCat.Visible = False
+        txtOtherCat.Visible = False
         cboMixedCat.Visible = True
         cboCrossbreedCat.Visible = False
         cboPedigreeCat.Visible = False
@@ -117,9 +127,6 @@
         gboBreedDog.Visible = False
         gboBreedCat.Visible = False
         btnContinue.Visible = False
-        cboCrossbreedDog.Items.Clear()
-        cboMixedDog.Items.Clear()
-        cboPedigreeDog.Items.Clear()
     End Sub
 
     Private Sub radDog_CheckedChanged(sender As Object, e As EventArgs) Handles radDog.CheckedChanged
@@ -130,8 +137,37 @@
         gboBreedDog.Visible = False
         gboBreedCat.Visible = False
         btnContinue.Visible = False
-        cboCrossbreedCat.Items.Clear()
-        cboMixedCat.Items.Clear()
-        cboPedigreeCat.Items.Clear()
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtOtherDog.TextChanged
+
+    End Sub
+
+    Private Sub cboPedigreeDog_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboPedigreeDog.SelectedIndexChanged
+        If cboPedigreeDog.Text = "Other" Then
+            txtOtherDog.Visible = True
+            lblOtherDog.Visible = True
+        End If
+    End Sub
+
+    Private Sub cboPedigreeCat_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboPedigreeCat.SelectedIndexChanged
+        If cboPedigreeCat.Text = "Other" Then
+            txtOtherCat.Visible = True
+            lblOtherCat.Visible = True
+        End If
+    End Sub
+
+    Private Sub cboCrossbreedCat_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCrossbreedCat.SelectedIndexChanged
+        If cboCrossbreedCat.Text = "Other" Then
+            txtOtherCat.Visible = True
+            lblOtherCat.Visible = True
+        End If
+    End Sub
+
+    Private Sub cboMixedCat_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMixedCat.SelectedIndexChanged
+        If cboMixedCat.Text = "Other" Then
+            txtOtherCat.Visible = True
+            lblOtherCat.Visible = True
+        End If
     End Sub
 End Class
