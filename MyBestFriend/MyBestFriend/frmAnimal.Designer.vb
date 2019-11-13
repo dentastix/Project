@@ -38,6 +38,7 @@ Partial Class frmAnimal
         Me.btnContinue = New System.Windows.Forms.Button()
         Me.lblPrompt = New System.Windows.Forms.Label()
         Me.gboBreedDog = New System.Windows.Forms.GroupBox()
+        Me.txtCostDog = New System.Windows.Forms.TextBox()
         Me.lblOtherDog = New System.Windows.Forms.Label()
         Me.txtOtherDog = New System.Windows.Forms.TextBox()
         Me.cboMixedDog = New System.Windows.Forms.ComboBox()
@@ -47,6 +48,7 @@ Partial Class frmAnimal
         Me.radCrossbreedDog = New System.Windows.Forms.RadioButton()
         Me.radPedigreeDog = New System.Windows.Forms.RadioButton()
         Me.gboBreedCat = New System.Windows.Forms.GroupBox()
+        Me.txtCostCat = New System.Windows.Forms.TextBox()
         Me.lblOtherCat = New System.Windows.Forms.Label()
         Me.txtOtherCat = New System.Windows.Forms.TextBox()
         Me.cboMixedCat = New System.Windows.Forms.ComboBox()
@@ -55,6 +57,8 @@ Partial Class frmAnimal
         Me.radMixedCat = New System.Windows.Forms.RadioButton()
         Me.radCrossbreedCat = New System.Windows.Forms.RadioButton()
         Me.radPedigreeCat = New System.Windows.Forms.RadioButton()
+        Me.btnContinueDog = New System.Windows.Forms.Button()
+        Me.btnContinueCat = New System.Windows.Forms.Button()
         Me.gboAnimal.SuspendLayout()
         CType(Me.picInsurance, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gboInsurance.SuspendLayout()
@@ -96,7 +100,7 @@ Partial Class frmAnimal
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(75, 23)
         Me.btnNext.TabIndex = 4
-        Me.btnNext.Text = "Next"
+        Me.btnNext.Text = "&Next"
         Me.btnNext.UseVisualStyleBackColor = False
         '
         'picInsurance
@@ -118,7 +122,7 @@ Partial Class frmAnimal
         Me.radDog.Size = New System.Drawing.Size(47, 19)
         Me.radDog.TabIndex = 2
         Me.radDog.TabStop = True
-        Me.radDog.Text = "Dog"
+        Me.radDog.Text = "&Dog"
         Me.radDog.UseVisualStyleBackColor = True
         '
         'radCat
@@ -130,7 +134,7 @@ Partial Class frmAnimal
         Me.radCat.Size = New System.Drawing.Size(43, 19)
         Me.radCat.TabIndex = 1
         Me.radCat.TabStop = True
-        Me.radCat.Text = "Cat"
+        Me.radCat.Text = "&Cat"
         Me.radCat.UseVisualStyleBackColor = True
         '
         'gboInsurance
@@ -143,7 +147,7 @@ Partial Class frmAnimal
         Me.gboInsurance.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gboInsurance.Location = New System.Drawing.Point(12, 190)
         Me.gboInsurance.Name = "gboInsurance"
-        Me.gboInsurance.Size = New System.Drawing.Size(289, 167)
+        Me.gboInsurance.Size = New System.Drawing.Size(289, 130)
         Me.gboInsurance.TabIndex = 2
         Me.gboInsurance.TabStop = False
         Me.gboInsurance.Text = "Insurance Type"
@@ -152,7 +156,7 @@ Partial Class frmAnimal
         '
         Me.lblInsurance.AutoSize = True
         Me.lblInsurance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInsurance.Location = New System.Drawing.Point(9, 32)
+        Me.lblInsurance.Location = New System.Drawing.Point(6, 19)
         Me.lblInsurance.Name = "lblInsurance"
         Me.lblInsurance.Size = New System.Drawing.Size(262, 17)
         Me.lblInsurance.TabIndex = 3
@@ -162,36 +166,36 @@ Partial Class frmAnimal
         '
         Me.radPlus.AutoSize = True
         Me.radPlus.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radPlus.Location = New System.Drawing.Point(9, 135)
+        Me.radPlus.Location = New System.Drawing.Point(9, 99)
         Me.radPlus.Name = "radPlus"
         Me.radPlus.Size = New System.Drawing.Size(244, 19)
         Me.radPlus.TabIndex = 2
         Me.radPlus.TabStop = True
-        Me.radPlus.Text = "Premier Plus Cover (Accident and Illness):"
+        Me.radPlus.Text = "P&remier Plus Cover (Accident and Illness):"
         Me.radPlus.UseVisualStyleBackColor = True
         '
         'radPremier
         '
         Me.radPremier.AutoSize = True
         Me.radPremier.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radPremier.Location = New System.Drawing.Point(9, 98)
+        Me.radPremier.Location = New System.Drawing.Point(9, 74)
         Me.radPremier.Name = "radPremier"
         Me.radPremier.Size = New System.Drawing.Size(219, 19)
         Me.radPremier.TabIndex = 1
         Me.radPremier.TabStop = True
-        Me.radPremier.Text = "Premier Cover (Accident and Illness):"
+        Me.radPremier.Text = "&Premier Cover (Accident and Illness):"
         Me.radPremier.UseVisualStyleBackColor = True
         '
         'radEssential
         '
         Me.radEssential.AutoSize = True
         Me.radEssential.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radEssential.Location = New System.Drawing.Point(9, 62)
+        Me.radEssential.Location = New System.Drawing.Point(9, 49)
         Me.radEssential.Name = "radEssential"
         Me.radEssential.Size = New System.Drawing.Size(193, 19)
         Me.radEssential.TabIndex = 0
         Me.radEssential.TabStop = True
-        Me.radEssential.Text = "Essential Cover (Accident Only):"
+        Me.radEssential.Text = "&Essential Cover (Accident Only):"
         Me.radEssential.UseVisualStyleBackColor = True
         '
         'picLogo
@@ -213,17 +217,17 @@ Partial Class frmAnimal
         Me.txtDescription.Multiline = True
         Me.txtDescription.Name = "txtDescription"
         Me.txtDescription.ReadOnly = True
-        Me.txtDescription.Size = New System.Drawing.Size(397, 162)
+        Me.txtDescription.Size = New System.Drawing.Size(397, 141)
         Me.txtDescription.TabIndex = 4
         '
         'btnContinue
         '
         Me.btnContinue.BackColor = System.Drawing.Color.White
-        Me.btnContinue.Location = New System.Drawing.Point(226, 363)
+        Me.btnContinue.Location = New System.Drawing.Point(226, 321)
         Me.btnContinue.Name = "btnContinue"
         Me.btnContinue.Size = New System.Drawing.Size(75, 23)
         Me.btnContinue.TabIndex = 5
-        Me.btnContinue.Text = "Continue"
+        Me.btnContinue.Text = "C&ontinue"
         Me.btnContinue.UseVisualStyleBackColor = False
         '
         'lblPrompt
@@ -240,6 +244,8 @@ Partial Class frmAnimal
         'gboBreedDog
         '
         Me.gboBreedDog.BackColor = System.Drawing.Color.Transparent
+        Me.gboBreedDog.Controls.Add(Me.btnContinueDog)
+        Me.gboBreedDog.Controls.Add(Me.txtCostDog)
         Me.gboBreedDog.Controls.Add(Me.lblOtherDog)
         Me.gboBreedDog.Controls.Add(Me.txtOtherDog)
         Me.gboBreedDog.Controls.Add(Me.cboMixedDog)
@@ -249,12 +255,20 @@ Partial Class frmAnimal
         Me.gboBreedDog.Controls.Add(Me.radCrossbreedDog)
         Me.gboBreedDog.Controls.Add(Me.radPedigreeDog)
         Me.gboBreedDog.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gboBreedDog.Location = New System.Drawing.Point(12, 400)
+        Me.gboBreedDog.Location = New System.Drawing.Point(12, 350)
         Me.gboBreedDog.Name = "gboBreedDog"
         Me.gboBreedDog.Size = New System.Drawing.Size(760, 108)
         Me.gboBreedDog.TabIndex = 7
         Me.gboBreedDog.TabStop = False
         Me.gboBreedDog.Text = "Step 3: Select your breed of Dog"
+        '
+        'txtCostDog
+        '
+        Me.txtCostDog.Location = New System.Drawing.Point(574, 32)
+        Me.txtCostDog.Name = "txtCostDog"
+        Me.txtCostDog.ReadOnly = True
+        Me.txtCostDog.Size = New System.Drawing.Size(161, 25)
+        Me.txtCostDog.TabIndex = 8
         '
         'lblOtherDog
         '
@@ -350,6 +364,8 @@ Partial Class frmAnimal
         'gboBreedCat
         '
         Me.gboBreedCat.BackColor = System.Drawing.Color.Transparent
+        Me.gboBreedCat.Controls.Add(Me.btnContinueCat)
+        Me.gboBreedCat.Controls.Add(Me.txtCostCat)
         Me.gboBreedCat.Controls.Add(Me.lblOtherCat)
         Me.gboBreedCat.Controls.Add(Me.txtOtherCat)
         Me.gboBreedCat.Controls.Add(Me.cboMixedCat)
@@ -359,12 +375,20 @@ Partial Class frmAnimal
         Me.gboBreedCat.Controls.Add(Me.radCrossbreedCat)
         Me.gboBreedCat.Controls.Add(Me.radPedigreeCat)
         Me.gboBreedCat.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gboBreedCat.Location = New System.Drawing.Point(12, 400)
+        Me.gboBreedCat.Location = New System.Drawing.Point(12, 475)
         Me.gboBreedCat.Name = "gboBreedCat"
         Me.gboBreedCat.Size = New System.Drawing.Size(760, 108)
         Me.gboBreedCat.TabIndex = 8
         Me.gboBreedCat.TabStop = False
         Me.gboBreedCat.Text = "Step 3: Select your breed of Cat"
+        '
+        'txtCostCat
+        '
+        Me.txtCostCat.Location = New System.Drawing.Point(574, 35)
+        Me.txtCostCat.Name = "txtCostCat"
+        Me.txtCostCat.ReadOnly = True
+        Me.txtCostCat.Size = New System.Drawing.Size(161, 25)
+        Me.txtCostCat.TabIndex = 8
         '
         'lblOtherCat
         '
@@ -457,6 +481,26 @@ Partial Class frmAnimal
         Me.radPedigreeCat.Text = "Pedigree Cat"
         Me.radPedigreeCat.UseVisualStyleBackColor = True
         '
+        'btnContinueDog
+        '
+        Me.btnContinueDog.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnContinueDog.Location = New System.Drawing.Point(660, 75)
+        Me.btnContinueDog.Name = "btnContinueDog"
+        Me.btnContinueDog.Size = New System.Drawing.Size(75, 23)
+        Me.btnContinueDog.TabIndex = 9
+        Me.btnContinueDog.Text = "Co&ntinue"
+        Me.btnContinueDog.UseVisualStyleBackColor = True
+        '
+        'btnContinueCat
+        '
+        Me.btnContinueCat.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnContinueCat.Location = New System.Drawing.Point(660, 76)
+        Me.btnContinueCat.Name = "btnContinueCat"
+        Me.btnContinueCat.Size = New System.Drawing.Size(75, 23)
+        Me.btnContinueCat.TabIndex = 9
+        Me.btnContinueCat.Text = "Co&ntinue"
+        Me.btnContinueCat.UseVisualStyleBackColor = True
+        '
         'frmAnimal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -523,4 +567,8 @@ Partial Class frmAnimal
     Friend WithEvents txtOtherDog As TextBox
     Friend WithEvents txtOtherCat As TextBox
     Friend WithEvents lblOtherCat As Label
+    Friend WithEvents txtCostDog As TextBox
+    Friend WithEvents txtCostCat As TextBox
+    Friend WithEvents btnContinueDog As Button
+    Friend WithEvents btnContinueCat As Button
 End Class

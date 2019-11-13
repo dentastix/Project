@@ -1,4 +1,91 @@
 ﻿Public Class frmAnimal
+    Const decAfricanE As Decimal = 1.14D
+    Const decBoxerE As Decimal = 0.86D
+    Const decChihuahuaE As Decimal = 1.83D
+    Const decDalmatianE As Decimal = 0.65D
+    Const decEskimoDogE As Decimal = 1.14D
+    Const decFarmE As Decimal = 0.95D
+    Const decGreyE As Decimal = 1.99D
+    Const decHuskyE As Decimal = 1.85D
+    Const decIrishE As Decimal = 0.65D
+    Const decJackE As Decimal = 1.77D
+    Const decKingE As Decimal = 1.02D
+    Const decLabradorE As Decimal = 1.74D
+    Const decMalteseE As Decimal = 1.47D
+    Const decPugE As Decimal = 1.31D
+    Const decRottE As Decimal = 2.17D
+    Const decStBernardE As Decimal = 1.63D
+    Const decTibetanE As Decimal = 1.15D
+    Const decWorkingSheepE As Decimal = 0.75D
+    Const decYorkshireE As Decimal = 0.88D
+    Const decOtherE As Decimal = 1.22D
+
+    Const decAfricanP As Decimal = 1.24D
+    Const decBoxerP As Decimal = 0.94D
+    Const decChihuahuaP As Decimal = 1.99D
+    Const decDalmatianP As Decimal = 0.79D
+    Const decEskimoDogP As Decimal = 1.25D
+    Const decFarmP As Decimal = 1.02D
+    Const decGreyP As Decimal = 2.14D
+    Const decHuskyP As Decimal = 2.08D
+    Const decIrishP As Decimal = 0.8D
+    Const decJackP As Decimal = 1.98D
+    Const decKingP As Decimal = 1.22D
+    Const decLabradorP As Decimal = 1.98D
+    Const decMalteseP As Decimal = 1.66D
+    Const decPugP As Decimal = 1.61D
+    Const decRottP As Decimal = 2.55D
+    Const decStBernardP As Decimal = 1.82D
+    Const decTibetanP As Decimal = 1.3D
+    Const decWorkingSheepP As Decimal = 0.88D
+    Const decYorkshireP As Decimal = 1.11D
+    Const decOtherP As Decimal = 1.55D
+
+    Const decAfricanPP As Decimal = 1.35D
+    Const decBoxerPP As Decimal = 1.26D
+    Const decChihuahuaPP As Decimal = 2.04D
+    Const decDalmatianPP As Decimal = 1D
+    Const decEskimoDogPP As Decimal = 1.56D
+    Const decFarmPP As Decimal = 1.3D
+    Const decGreyPP As Decimal = 2.38D
+    Const decHuskyPP As Decimal = 2.25D
+    Const decIrishPP As Decimal = 1.15D
+    Const decJackPP As Decimal = 2.12D
+    Const decKingPP As Decimal = 1.56D
+    Const decLabradorPP As Decimal = 2.11D
+    Const decMaltesePP As Decimal = 1.99D
+    Const decPugPP As Decimal = 1.89D
+    Const decRottPP As Decimal = 2.99D
+    Const decStBernardPP As Decimal = 2.02D
+    Const decTibetanPP As Decimal = 1.61D
+    Const decWorkingSheepPP As Decimal = 1.11D
+    Const decYorkshirePP As Decimal = 1.48D
+    Const decOtherPP As Decimal = 1.79D
+
+    Const decSmallCrossbreedE As Decimal = 1.17D
+    Const decMedCrossbreedE As Decimal = 1.17 * 1.1D
+    Const decLargeCrossbreedE As Decimal = 1.17 * 1.2D
+
+    Const decSmallCrossbreedP As Decimal = 1.38D
+    Const decMedCrossbreedP As Decimal = 1.38 * 1.1D
+    Const decLargeCrossbreedP As Decimal = 1.38 * 1.2D
+
+    Const decSmallCrossbreedPP As Decimal = 1.45D
+    Const decMedCrossbreedPP As Decimal = 1.45 * 1.1D
+    Const decLargeCrossbreedPP As Decimal = 1.45 * 1.2D
+
+    Const decSmallMongrelE As Decimal = 0.99D
+    Const decMedMongrelE As Decimal = 0.99 * 1.1D
+    Const decLargeMongrelE As Decimal = 0.99 * 1.2D
+
+    Const decSmallMongrelP As Decimal = 1.09D
+    Const decMedMongrelP As Decimal = 1.09 * 1.1D
+    Const decLargeMongrelP As Decimal = 1.09 * 1.2D
+
+    Const decSmallMongrelPP As Decimal = 1.29D
+    Const decMedMongrelPP As Decimal = 1.29 * 1.1D
+    Const decLargeMongrelPP As Decimal = 1.29 * 1.2D
+
 
     Private Sub frmAnimal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'When Form loads hide everything except from the necessary tools for the user 
@@ -11,10 +98,12 @@
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        'Once the Next button is clicked then, the necessary items for the user to complete the next step become available
         radEssential.Focus()
         gboInsurance.Visible = True
         txtDescription.Visible = True
         lblPrompt.Visible = True
+        'Disable the ability to continue until the step is completed
         btnContinue.Enabled = False
     End Sub
 
@@ -67,6 +156,8 @@
         cboPedigreeDog.Visible = False
         txtOtherDog.Visible = False
         lblOtherDog.Visible = False
+
+
     End Sub
 
     Private Sub radPedigree_CheckedChanged(sender As Object, e As EventArgs) Handles radPedigreeDog.CheckedChanged
@@ -79,12 +170,16 @@
         cboCrossbreedDog.Visible = True
         cboMixedDog.Visible = False
         cboPedigreeDog.Visible = False
+        lblOtherDog.Visible = False
+        txtOtherDog.Visible = False
     End Sub
 
     Private Sub radMixed_CheckedChanged(sender As Object, e As EventArgs) Handles radMixedDog.CheckedChanged
         cboMixedDog.Visible = True
         cboCrossbreedDog.Visible = False
         cboPedigreeDog.Visible = False
+        lblOtherDog.Visible = False
+        txtOtherDog.Visible = False
     End Sub
 
     Private Sub gboBreedCat_Enter(sender As Object, e As EventArgs) Handles gboBreedCat.Enter
