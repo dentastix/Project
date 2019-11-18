@@ -58,15 +58,25 @@ Partial Class frmAnimal
         Me.radCrossbreedCat = New System.Windows.Forms.RadioButton()
         Me.radPedigreeCat = New System.Windows.Forms.RadioButton()
         Me.gboOptionsCat = New System.Windows.Forms.GroupBox()
+        Me.radMediumCatHouse = New System.Windows.Forms.RadioButton()
+        Me.radSmallCatHouse = New System.Windows.Forms.RadioButton()
+        Me.radMediumCatGrooming = New System.Windows.Forms.RadioButton()
+        Me.radSmallCatGrooming = New System.Windows.Forms.RadioButton()
         Me.radHouseCat = New System.Windows.Forms.RadioButton()
         Me.radGroomingCat = New System.Windows.Forms.RadioButton()
         Me.gboOptionsDog = New System.Windows.Forms.GroupBox()
+        Me.radLargeDogHouse = New System.Windows.Forms.RadioButton()
+        Me.radMediumDogHouse = New System.Windows.Forms.RadioButton()
+        Me.radSmallDogHouse = New System.Windows.Forms.RadioButton()
+        Me.radLargeDogLong = New System.Windows.Forms.RadioButton()
+        Me.radMediumDogLong = New System.Windows.Forms.RadioButton()
+        Me.radSmallDogLong = New System.Windows.Forms.RadioButton()
+        Me.radLargeDogShort = New System.Windows.Forms.RadioButton()
+        Me.radMediumDogShort = New System.Windows.Forms.RadioButton()
+        Me.radSmallDogShort = New System.Windows.Forms.RadioButton()
+        Me.cboGroomingDog = New System.Windows.Forms.ComboBox()
         Me.radHouseDog = New System.Windows.Forms.RadioButton()
         Me.radGroomingDog = New System.Windows.Forms.RadioButton()
-        Me.cboGroomingDog = New System.Windows.Forms.ComboBox()
-        Me.radSmallDog = New System.Windows.Forms.RadioButton()
-        Me.radMediumDog = New System.Windows.Forms.RadioButton()
-        Me.radLargeDog = New System.Windows.Forms.RadioButton()
         Me.gboAnimal.SuspendLayout()
         CType(Me.picInsurance, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gboInsurance.SuspendLayout()
@@ -500,6 +510,10 @@ Partial Class frmAnimal
         'gboOptionsCat
         '
         Me.gboOptionsCat.BackColor = System.Drawing.Color.Transparent
+        Me.gboOptionsCat.Controls.Add(Me.radMediumCatHouse)
+        Me.gboOptionsCat.Controls.Add(Me.radSmallCatHouse)
+        Me.gboOptionsCat.Controls.Add(Me.radMediumCatGrooming)
+        Me.gboOptionsCat.Controls.Add(Me.radSmallCatGrooming)
         Me.gboOptionsCat.Controls.Add(Me.radHouseCat)
         Me.gboOptionsCat.Controls.Add(Me.radGroomingCat)
         Me.gboOptionsCat.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -509,6 +523,58 @@ Partial Class frmAnimal
         Me.gboOptionsCat.TabIndex = 9
         Me.gboOptionsCat.TabStop = False
         Me.gboOptionsCat.Text = "Step 4: Additional Options (Optional)"
+        '
+        'radMediumCatHouse
+        '
+        Me.radMediumCatHouse.AutoSize = True
+        Me.radMediumCatHouse.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radMediumCatHouse.Location = New System.Drawing.Point(331, 73)
+        Me.radMediumCatHouse.Name = "radMediumCatHouse"
+        Me.radMediumCatHouse.Size = New System.Drawing.Size(91, 19)
+        Me.radMediumCatHouse.TabIndex = 14
+        Me.radMediumCatHouse.TabStop = True
+        Me.radMediumCatHouse.Text = "Medium €14"
+        Me.radMediumCatHouse.UseVisualStyleBackColor = True
+        Me.radMediumCatHouse.Visible = False
+        '
+        'radSmallCatHouse
+        '
+        Me.radSmallCatHouse.AutoSize = True
+        Me.radSmallCatHouse.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radSmallCatHouse.Location = New System.Drawing.Point(331, 36)
+        Me.radSmallCatHouse.Name = "radSmallCatHouse"
+        Me.radSmallCatHouse.Size = New System.Drawing.Size(75, 19)
+        Me.radSmallCatHouse.TabIndex = 13
+        Me.radSmallCatHouse.TabStop = True
+        Me.radSmallCatHouse.Text = "Small €14"
+        Me.radSmallCatHouse.UseVisualStyleBackColor = True
+        Me.radSmallCatHouse.Visible = False
+        '
+        'radMediumCatGrooming
+        '
+        Me.radMediumCatGrooming.AutoSize = True
+        Me.radMediumCatGrooming.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radMediumCatGrooming.Location = New System.Drawing.Point(331, 73)
+        Me.radMediumCatGrooming.Name = "radMediumCatGrooming"
+        Me.radMediumCatGrooming.Size = New System.Drawing.Size(91, 19)
+        Me.radMediumCatGrooming.TabIndex = 12
+        Me.radMediumCatGrooming.TabStop = True
+        Me.radMediumCatGrooming.Text = "Medium €25"
+        Me.radMediumCatGrooming.UseVisualStyleBackColor = True
+        Me.radMediumCatGrooming.Visible = False
+        '
+        'radSmallCatGrooming
+        '
+        Me.radSmallCatGrooming.AutoSize = True
+        Me.radSmallCatGrooming.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radSmallCatGrooming.Location = New System.Drawing.Point(331, 36)
+        Me.radSmallCatGrooming.Name = "radSmallCatGrooming"
+        Me.radSmallCatGrooming.Size = New System.Drawing.Size(75, 19)
+        Me.radSmallCatGrooming.TabIndex = 10
+        Me.radSmallCatGrooming.TabStop = True
+        Me.radSmallCatGrooming.Text = "Small €20"
+        Me.radSmallCatGrooming.UseVisualStyleBackColor = True
+        Me.radSmallCatGrooming.Visible = False
         '
         'radHouseCat
         '
@@ -536,20 +602,153 @@ Partial Class frmAnimal
         '
         'gboOptionsDog
         '
-        Me.gboOptionsDog.BackColor = System.Drawing.Color.White
-        Me.gboOptionsDog.Controls.Add(Me.radLargeDog)
-        Me.gboOptionsDog.Controls.Add(Me.radMediumDog)
-        Me.gboOptionsDog.Controls.Add(Me.radSmallDog)
+        Me.gboOptionsDog.BackColor = System.Drawing.Color.Transparent
+        Me.gboOptionsDog.Controls.Add(Me.radLargeDogHouse)
+        Me.gboOptionsDog.Controls.Add(Me.radMediumDogHouse)
+        Me.gboOptionsDog.Controls.Add(Me.radSmallDogHouse)
+        Me.gboOptionsDog.Controls.Add(Me.radLargeDogLong)
+        Me.gboOptionsDog.Controls.Add(Me.radMediumDogLong)
+        Me.gboOptionsDog.Controls.Add(Me.radSmallDogLong)
+        Me.gboOptionsDog.Controls.Add(Me.radLargeDogShort)
+        Me.gboOptionsDog.Controls.Add(Me.radMediumDogShort)
+        Me.gboOptionsDog.Controls.Add(Me.radSmallDogShort)
         Me.gboOptionsDog.Controls.Add(Me.cboGroomingDog)
         Me.gboOptionsDog.Controls.Add(Me.radHouseDog)
         Me.gboOptionsDog.Controls.Add(Me.radGroomingDog)
         Me.gboOptionsDog.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gboOptionsDog.Location = New System.Drawing.Point(12, 350)
+        Me.gboOptionsDog.Location = New System.Drawing.Point(12, 484)
         Me.gboOptionsDog.Name = "gboOptionsDog"
         Me.gboOptionsDog.Size = New System.Drawing.Size(760, 123)
         Me.gboOptionsDog.TabIndex = 10
         Me.gboOptionsDog.TabStop = False
-        Me.gboOptionsDog.Text = "Step 4: Additional Options (Options)"
+        Me.gboOptionsDog.Text = "Step 4: Additional Options (Optional)"
+        '
+        'radLargeDogHouse
+        '
+        Me.radLargeDogHouse.AutoSize = True
+        Me.radLargeDogHouse.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radLargeDogHouse.Location = New System.Drawing.Point(480, 80)
+        Me.radLargeDogHouse.Name = "radLargeDogHouse"
+        Me.radLargeDogHouse.Size = New System.Drawing.Size(75, 19)
+        Me.radLargeDogHouse.TabIndex = 11
+        Me.radLargeDogHouse.TabStop = True
+        Me.radLargeDogHouse.Text = "Large €28"
+        Me.radLargeDogHouse.UseVisualStyleBackColor = True
+        Me.radLargeDogHouse.Visible = False
+        '
+        'radMediumDogHouse
+        '
+        Me.radMediumDogHouse.AutoSize = True
+        Me.radMediumDogHouse.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radMediumDogHouse.Location = New System.Drawing.Point(480, 53)
+        Me.radMediumDogHouse.Name = "radMediumDogHouse"
+        Me.radMediumDogHouse.Size = New System.Drawing.Size(91, 19)
+        Me.radMediumDogHouse.TabIndex = 10
+        Me.radMediumDogHouse.TabStop = True
+        Me.radMediumDogHouse.Text = "Medium €22"
+        Me.radMediumDogHouse.UseVisualStyleBackColor = True
+        Me.radMediumDogHouse.Visible = False
+        '
+        'radSmallDogHouse
+        '
+        Me.radSmallDogHouse.AutoSize = True
+        Me.radSmallDogHouse.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radSmallDogHouse.Location = New System.Drawing.Point(480, 27)
+        Me.radSmallDogHouse.Name = "radSmallDogHouse"
+        Me.radSmallDogHouse.Size = New System.Drawing.Size(75, 19)
+        Me.radSmallDogHouse.TabIndex = 9
+        Me.radSmallDogHouse.TabStop = True
+        Me.radSmallDogHouse.Text = "Small €18"
+        Me.radSmallDogHouse.UseVisualStyleBackColor = True
+        Me.radSmallDogHouse.Visible = False
+        '
+        'radLargeDogLong
+        '
+        Me.radLargeDogLong.AutoSize = True
+        Me.radLargeDogLong.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radLargeDogLong.Location = New System.Drawing.Point(480, 80)
+        Me.radLargeDogLong.Name = "radLargeDogLong"
+        Me.radLargeDogLong.Size = New System.Drawing.Size(75, 19)
+        Me.radLargeDogLong.TabIndex = 8
+        Me.radLargeDogLong.TabStop = True
+        Me.radLargeDogLong.Text = "Large €55"
+        Me.radLargeDogLong.UseVisualStyleBackColor = True
+        Me.radLargeDogLong.Visible = False
+        '
+        'radMediumDogLong
+        '
+        Me.radMediumDogLong.AutoSize = True
+        Me.radMediumDogLong.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radMediumDogLong.Location = New System.Drawing.Point(480, 55)
+        Me.radMediumDogLong.Name = "radMediumDogLong"
+        Me.radMediumDogLong.Size = New System.Drawing.Size(91, 19)
+        Me.radMediumDogLong.TabIndex = 7
+        Me.radMediumDogLong.TabStop = True
+        Me.radMediumDogLong.Text = "Medium €50"
+        Me.radMediumDogLong.UseVisualStyleBackColor = True
+        Me.radMediumDogLong.Visible = False
+        '
+        'radSmallDogLong
+        '
+        Me.radSmallDogLong.AutoSize = True
+        Me.radSmallDogLong.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radSmallDogLong.Location = New System.Drawing.Point(480, 27)
+        Me.radSmallDogLong.Name = "radSmallDogLong"
+        Me.radSmallDogLong.Size = New System.Drawing.Size(75, 19)
+        Me.radSmallDogLong.TabIndex = 6
+        Me.radSmallDogLong.TabStop = True
+        Me.radSmallDogLong.Text = "Small €45"
+        Me.radSmallDogLong.UseVisualStyleBackColor = True
+        Me.radSmallDogLong.Visible = False
+        '
+        'radLargeDogShort
+        '
+        Me.radLargeDogShort.AutoSize = True
+        Me.radLargeDogShort.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radLargeDogShort.Location = New System.Drawing.Point(480, 80)
+        Me.radLargeDogShort.Name = "radLargeDogShort"
+        Me.radLargeDogShort.Size = New System.Drawing.Size(75, 19)
+        Me.radLargeDogShort.TabIndex = 5
+        Me.radLargeDogShort.TabStop = True
+        Me.radLargeDogShort.Text = "Large €35"
+        Me.radLargeDogShort.UseVisualStyleBackColor = True
+        Me.radLargeDogShort.Visible = False
+        '
+        'radMediumDogShort
+        '
+        Me.radMediumDogShort.AutoSize = True
+        Me.radMediumDogShort.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radMediumDogShort.Location = New System.Drawing.Point(480, 55)
+        Me.radMediumDogShort.Name = "radMediumDogShort"
+        Me.radMediumDogShort.Size = New System.Drawing.Size(91, 19)
+        Me.radMediumDogShort.TabIndex = 4
+        Me.radMediumDogShort.TabStop = True
+        Me.radMediumDogShort.Text = "Medium €30"
+        Me.radMediumDogShort.UseVisualStyleBackColor = True
+        Me.radMediumDogShort.Visible = False
+        '
+        'radSmallDogShort
+        '
+        Me.radSmallDogShort.AutoSize = True
+        Me.radSmallDogShort.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radSmallDogShort.Location = New System.Drawing.Point(480, 27)
+        Me.radSmallDogShort.Name = "radSmallDogShort"
+        Me.radSmallDogShort.Size = New System.Drawing.Size(75, 19)
+        Me.radSmallDogShort.TabIndex = 3
+        Me.radSmallDogShort.TabStop = True
+        Me.radSmallDogShort.Text = "Small €25"
+        Me.radSmallDogShort.UseVisualStyleBackColor = True
+        Me.radSmallDogShort.Visible = False
+        '
+        'cboGroomingDog
+        '
+        Me.cboGroomingDog.FormattingEnabled = True
+        Me.cboGroomingDog.Items.AddRange(New Object() {"Short / Smooth", "Long / Heavy / Curly"})
+        Me.cboGroomingDog.Location = New System.Drawing.Point(266, 33)
+        Me.cboGroomingDog.Name = "cboGroomingDog"
+        Me.cboGroomingDog.Size = New System.Drawing.Size(121, 25)
+        Me.cboGroomingDog.TabIndex = 2
+        Me.cboGroomingDog.Visible = False
         '
         'radHouseDog
         '
@@ -574,55 +773,6 @@ Partial Class frmAnimal
         Me.radGroomingDog.TabStop = True
         Me.radGroomingDog.Text = "Grooming Services"
         Me.radGroomingDog.UseVisualStyleBackColor = True
-        '
-        'cboGroomingDog
-        '
-        Me.cboGroomingDog.FormattingEnabled = True
-        Me.cboGroomingDog.Items.AddRange(New Object() {"Short / Smooth", "Long / Heavy / Curly"})
-        Me.cboGroomingDog.Location = New System.Drawing.Point(260, 38)
-        Me.cboGroomingDog.Name = "cboGroomingDog"
-        Me.cboGroomingDog.Size = New System.Drawing.Size(121, 25)
-        Me.cboGroomingDog.TabIndex = 2
-        Me.cboGroomingDog.Visible = False
-        '
-        'radSmallDog
-        '
-        Me.radSmallDog.AutoSize = True
-        Me.radSmallDog.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radSmallDog.Location = New System.Drawing.Point(480, 27)
-        Me.radSmallDog.Name = "radSmallDog"
-        Me.radSmallDog.Size = New System.Drawing.Size(75, 19)
-        Me.radSmallDog.TabIndex = 3
-        Me.radSmallDog.TabStop = True
-        Me.radSmallDog.Text = "Small €25"
-        Me.radSmallDog.UseVisualStyleBackColor = True
-        Me.radSmallDog.Visible = False
-        '
-        'radMediumDog
-        '
-        Me.radMediumDog.AutoSize = True
-        Me.radMediumDog.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radMediumDog.Location = New System.Drawing.Point(480, 55)
-        Me.radMediumDog.Name = "radMediumDog"
-        Me.radMediumDog.Size = New System.Drawing.Size(91, 19)
-        Me.radMediumDog.TabIndex = 4
-        Me.radMediumDog.TabStop = True
-        Me.radMediumDog.Text = "Medium €30"
-        Me.radMediumDog.UseVisualStyleBackColor = True
-        Me.radMediumDog.Visible = False
-        '
-        'radLargeDog
-        '
-        Me.radLargeDog.AutoSize = True
-        Me.radLargeDog.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radLargeDog.Location = New System.Drawing.Point(480, 80)
-        Me.radLargeDog.Name = "radLargeDog"
-        Me.radLargeDog.Size = New System.Drawing.Size(75, 19)
-        Me.radLargeDog.TabIndex = 5
-        Me.radLargeDog.TabStop = True
-        Me.radLargeDog.Text = "Large €35"
-        Me.radLargeDog.UseVisualStyleBackColor = True
-        Me.radLargeDog.Visible = False
         '
         'frmAnimal
         '
@@ -704,8 +854,18 @@ Partial Class frmAnimal
     Friend WithEvents gboOptionsDog As GroupBox
     Friend WithEvents radHouseDog As RadioButton
     Friend WithEvents radGroomingDog As RadioButton
-    Friend WithEvents radLargeDog As RadioButton
-    Friend WithEvents radMediumDog As RadioButton
-    Friend WithEvents radSmallDog As RadioButton
+    Friend WithEvents radLargeDogShort As RadioButton
+    Friend WithEvents radMediumDogShort As RadioButton
+    Friend WithEvents radSmallDogShort As RadioButton
     Friend WithEvents cboGroomingDog As ComboBox
+    Friend WithEvents radLargeDogLong As RadioButton
+    Friend WithEvents radMediumDogLong As RadioButton
+    Friend WithEvents radSmallDogLong As RadioButton
+    Friend WithEvents radLargeDogHouse As RadioButton
+    Friend WithEvents radMediumDogHouse As RadioButton
+    Friend WithEvents radSmallDogHouse As RadioButton
+    Friend WithEvents radMediumCatGrooming As RadioButton
+    Friend WithEvents radSmallCatGrooming As RadioButton
+    Friend WithEvents radMediumCatHouse As RadioButton
+    Friend WithEvents radSmallCatHouse As RadioButton
 End Class

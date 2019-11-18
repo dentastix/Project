@@ -417,16 +417,80 @@
 
     Private Sub gboOptionsDog_Enter(sender As Object, e As EventArgs) Handles gboOptionsDog.Enter
         cboGroomingDog.Visible = False
-        radSmallDog.Visible = False
-        radMediumDog.Visible = False
-        radLargeDog.Visible = False
+        radSmallDogShort.Visible = False
+        radMediumDogShort.Visible = False
+        radLargeDogShort.Visible = False
+        radSmallDogLong.Visible = False
+        radMediumDogLong.Visible = False
+        radLargeDogLong.Visible = False
+        radSmallDogHouse.Visible = False
+        radMediumDogHouse.Visible = False
+        radLargeDogHouse.Visible = False
     End Sub
 
     Private Sub cboGroomingDog_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboGroomingDog.SelectedIndexChanged
         If cboGroomingDog.Text = "Short / Smooth" Then
-            radSmallDog.Visible = True And radMediumDog.Visible = True And radLargeDog.Visible = True
+            radSmallDogShort.Visible = True And radMediumDogShort.Visible = True And radLargeDogShort.Visible = True
         Else
-            radSmallDog.Visible = False And radMediumDog.Visible = False And radLargeDog.Visible = False
+            radSmallDogShort.Visible = False And radMediumDogShort.Visible = False And radLargeDogShort.Visible = False
+        End If
+
+        If cboGroomingDog.Text = "Long / Heavy / Curly" Then
+            radSmallDogLong.Visible = True And radMediumDogLong.Visible = True And radLargeDogLong.Visible = True
+        Else
+            radSmallDogLong.Visible = False And radMediumDogLong.Visible = False And radLargeDogLong.Visible = False
+        End If
+
+    End Sub
+
+    Private Sub radHouseDog_CheckedChanged(sender As Object, e As EventArgs) Handles radHouseDog.CheckedChanged
+        If radHouseDog.Checked Then
+            radSmallDogHouse.Visible = True
+            radMediumDogHouse.Visible = True
+            radLargeDogHouse.Visible = True
+        Else
+            radSmallDogHouse.Visible = False
+            radMediumDogHouse.Visible = False
+            radLargeDogHouse.Visible = False
+        End If
+
+    End Sub
+
+    Private Sub radGroomingDog_CheckedChanged(sender As Object, e As EventArgs) Handles radGroomingDog.CheckedChanged
+        If radGroomingDog.Checked Then
+            cboGroomingDog.Visible = True
+        Else
+            cboGroomingDog.Visible = False
         End If
     End Sub
+
+    Private Sub gboOptionsCat_Enter(sender As Object, e As EventArgs) Handles gboOptionsCat.Enter
+        radSmallCatGrooming.Visible = False
+        radMediumCatGrooming.Visible = False
+        radSmallCatHouse.Visible = False
+        radMediumCatHouse.Visible = False
+    End Sub
+
+    Private Sub radGroomingCat_CheckedChanged(sender As Object, e As EventArgs) Handles radGroomingCat.CheckedChanged
+        If radGroomingCat.Checked Then
+            radSmallCatGrooming.Visible = True
+            radMediumCatGrooming.Visible = True
+        Else
+            radSmallCatGrooming.Visible = False
+            radMediumCatGrooming.Visible = False
+        End If
+
+    End Sub
+
+    Private Sub radHouseCat_CheckedChanged(sender As Object, e As EventArgs) Handles radHouseCat.CheckedChanged
+        If radHouseCat.Checked Then
+            radSmallCatHouse.Visible = True
+            radMediumCatHouse.Visible = True
+        Else
+            radSmallCatHouse.Visible = False
+            radMediumCatHouse.Visible = False
+        End If
+
+    End Sub
+
 End Class
