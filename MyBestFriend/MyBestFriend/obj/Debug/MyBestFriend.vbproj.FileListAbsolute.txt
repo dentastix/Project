@@ -11,3 +11,16 @@ H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.xml
 H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.pdb
 H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.frmLogin.resources
 H:\1st Year\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.frmAnimal.resources
+C:\Users\Sam\Desktop\Project-master\MyBestFriend\MyBestFriend\bin\Debug\MyBestFriend.exe.config
+C:\Users\Sam\Desktop\Project-master\MyBestFriend\MyBestFriend\bin\Debug\MyBestFriend.exe
+C:\Users\Sam\Desktop\Project-master\MyBestFriend\MyBestFriend\bin\Debug\MyBestFriend.pdb
+C:\Users\Sam\Desktop\Project-master\MyBestFriend\MyBestFriend\bin\Debug\MyBestFriend.xml
+C:\Users\Sam\Desktop\Project-master\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.vbprojAssemblyReference.cache
+C:\Users\Sam\Desktop\Project-master\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.frmAnimal.resources
+C:\Users\Sam\Desktop\Project-master\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.frmLogin.resources
+C:\Users\Sam\Desktop\Project-master\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.Resources.resources
+C:\Users\Sam\Desktop\Project-master\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.vbproj.GenerateResource.cache
+C:\Users\Sam\Desktop\Project-master\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.vbproj.CoreCompileInputs.cache
+C:\Users\Sam\Desktop\Project-master\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.exe
+C:\Users\Sam\Desktop\Project-master\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.xml
+C:\Users\Sam\Desktop\Project-master\MyBestFriend\MyBestFriend\obj\Debug\MyBestFriend.pdb

@@ -358,6 +358,8 @@
 
         If radPedigreeDog.Checked And cboPedigreeDog.Text <> "" Then
             btnContinueDog.Visible = True
+        Else
+            btnContinue.Visible = False
         End If
     End Sub
 
@@ -368,6 +370,8 @@
         End If
         If radPedigreeCat.Checked And cboPedigreeCat.Text <> "" Then
             btnContinueCat.Visible = True
+        Else
+            btnContinue.Visible = False
         End If
     End Sub
 
@@ -375,6 +379,8 @@
         If cboCrossbreedCat.Text = "Other" Then
             txtOtherCat.Visible = True
             lblOtherCat.Visible = True
+        Else
+            btnContinue.Visible = False
         End If
 
         If radCrossbreedCat.Checked And cboCrossbreedCat.Text <> "" Then
@@ -386,6 +392,8 @@
         If cboMixedCat.Text = "Other" Then
             txtOtherCat.Visible = True
             lblOtherCat.Visible = True
+        Else
+            btnContinue.Visible = False
         End If
 
         If radMixedCat.Checked And cboMixedCat.Text <> "" Then
@@ -396,12 +404,16 @@
     Private Sub cboCrossbreedDog_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCrossbreedDog.SelectedIndexChanged
         If radCrossbreedDog.Checked And cboCrossbreedDog.Text <> "" Then
             btnContinueDog.Visible = True
+        Else
+            btnContinue.Visible = False
         End If
     End Sub
 
     Private Sub cboMixedDog_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMixedDog.SelectedIndexChanged
         If radMixedDog.Checked And cboMixedDog.Text <> "" Then
             btnContinueDog.Visible = True
+        Else
+            btnContinue.Visible = False
         End If
     End Sub
 
