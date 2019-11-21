@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmEnd.Designer.vb">
+      <DependentUpon>frmEnd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEnd.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmAnimal.Designer.vb">
       <DependentUpon>frmAnimal.vb</DependentUpon>
     </Compile>
@@ -84,6 +90,12 @@
     </Compile>
     <Compile Include="frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserDetails.Designer.vb">
+      <DependentUpon>frmUserDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserDetails.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -106,8 +118,14 @@
     <EmbeddedResource Include="frmAnimal.resx">
       <DependentUpon>frmAnimal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEnd.resx">
+      <DependentUpon>frmEnd.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserDetails.resx">
+      <DependentUpon>frmUserDetails.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -163,6 +181,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2113304-soft-blue-and-white-gradient-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Visa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mastercard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laser.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jack2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

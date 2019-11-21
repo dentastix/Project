@@ -27,7 +27,32 @@ MyBestFriend
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:MyBestFriend.My.Resources.Resources.amex">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MyBestFriend.My.Resources.Resources.jack">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MyBestFriend.My.Resources.Resources.jack2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MyBestFriend.My.Resources.Resources.laser">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:MyBestFriend.My.Resources.Resources.Logo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MyBestFriend.My.Resources.Resources.Mastercard">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -73,6 +98,11 @@ MyBestFriend
 </summary>
 </member>
 <member name="P:MyBestFriend.My.Resources.Resources.Picture2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MyBestFriend.My.Resources.Resources.Visa">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

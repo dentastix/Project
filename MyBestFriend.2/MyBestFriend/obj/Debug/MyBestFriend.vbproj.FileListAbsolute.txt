@@ -37,3 +37,5 @@ H:\MyBestFriend.2\MyBestFriend\obj\Debug\MyBestFriend.vbproj.CoreCompileInputs.c
 H:\MyBestFriend.2\MyBestFriend\obj\Debug\MyBestFriend.exe
 H:\MyBestFriend.2\MyBestFriend\obj\Debug\MyBestFriend.xml
 H:\MyBestFriend.2\MyBestFriend\obj\Debug\MyBestFriend.pdb
+H:\MyBestFriend.2\MyBestFriend\obj\Debug\MyBestFriend.frmUserDetails.resources
+H:\MyBestFriend.2\MyBestFriend\obj\Debug\MyBestFriend.frmEnd.resources

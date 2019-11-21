@@ -193,9 +193,10 @@
     Public decDomesticShorthairPP As Decimal = 1.04 * 1.2D
     Public decForeignShorthairPP As Decimal = 1.09 * 1.2D
     Public decOtherMixedBreedCatPP As Decimal = 1.18 * 1.2D
-
+    'Declaring Public variables for the prices
     Public decPricePerDay As Decimal
     Public decPricePerYear As Decimal
+    Public IntYear As Integer
 
     Private Sub frmAnimal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'When Form loads hide everything except from the necessary tools for the user 
@@ -210,6 +211,7 @@
         gboCost.Visible = False
         gboAddOns2.Visible = False
         gboAddOnsDog.Visible = False
+        btnNextPage.Visible = False
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
@@ -223,7 +225,7 @@
     End Sub
 
     Private Sub btnContinue_Click(sender As Object, e As EventArgs) Handles btnContinue.Click
-
+        'Depending on which animals chosen the corresponding groupbox appears
         If radCat.Checked Then
             gboBreedCat.Visible = True
             gboBreedDog.Visible = False
@@ -234,6 +236,7 @@
     End Sub
 
     Private Sub radEssential_CheckedChanged(sender As Object, e As EventArgs) Handles radEssential.CheckedChanged
+        'If essential cover is chosen then the description of the insurance will appear
         If radEssential.Checked Then
             btnContinue.Visible = True
             txtDescription.Text = "Your pet will be covered up to the vet fee limit for all covered accidental injuries per policy year."
@@ -246,6 +249,7 @@
     End Sub
 
     Private Sub radPremier_CheckedChanged(sender As Object, e As EventArgs) Handles radPremier.CheckedChanged
+        'If Premier cover is chosen then the description of the insurance will appear
         If radPremier.Checked Then
             btnContinue.Visible = True
             txtDescription.Text = "Your pet will be covered up to the vet fee limit for all covered illnesses and injuries per policy year."
@@ -257,6 +261,7 @@
     End Sub
 
     Private Sub radPlus_CheckedChanged(sender As Object, e As EventArgs) Handles radPlus.CheckedChanged
+        'If premier plus cover is chosen then the description of the insurance will appear
         If radPlus.Checked Then
             btnContinue.Visible = True
             txtDescription.Text = "Your pet will be covered up to the vet fee limit for all covered illnesses and injuries per policy year."
@@ -267,6 +272,7 @@
     End Sub
 
     Private Sub gboBreed_Enter(sender As Object, e As EventArgs) Handles gboBreedDog.Enter
+        'When dog group box appears, only the neccessary tools for the user appear
         cboMixedDog.Visible = False
         cboCrossbreedDog.Visible = False
         cboPedigreeDog.Visible = False
@@ -278,12 +284,14 @@
     End Sub
 
     Private Sub radPedigree_CheckedChanged(sender As Object, e As EventArgs) Handles radPedigreeDog.CheckedChanged
+        'If the Pedigree option is chosen then Only the pedigree options appear
         cboPedigreeDog.Visible = True
         cboMixedDog.Visible = False
         cboCrossbreedDog.Visible = False
     End Sub
 
     Private Sub radCrossbreed_CheckedChanged(sender As Object, e As EventArgs) Handles radCrossbreedDog.CheckedChanged
+        'If the Crossbreed option is chosen then Only the pedigree options appear
         cboCrossbreedDog.Visible = True
         cboMixedDog.Visible = False
         cboPedigreeDog.Visible = False
@@ -292,6 +300,7 @@
     End Sub
 
     Private Sub radMixed_CheckedChanged(sender As Object, e As EventArgs) Handles radMixedDog.CheckedChanged
+        'If the MixedBreed option is chosen then Only the pedigree options appear
         cboMixedDog.Visible = True
         cboCrossbreedDog.Visible = False
         cboPedigreeDog.Visible = False
@@ -300,6 +309,7 @@
     End Sub
 
     Private Sub gboBreedCat_Enter(sender As Object, e As EventArgs) Handles gboBreedCat.Enter
+        'When Cat Group Box opens then only the neccessary tools for the user appear 
         cboCrossbreedCat.Visible = False
         cboMixedCat.Visible = False
         cboPedigreeCat.Visible = False
@@ -309,6 +319,7 @@
     End Sub
 
     Private Sub radPedigreeCat_CheckedChanged(sender As Object, e As EventArgs) Handles radPedigreeCat.CheckedChanged
+        'If the Pedigree option is chosen then Only the pedigree options appear
         lblOtherCat.Visible = False
         txtOtherCat.Visible = False
         cboPedigreeCat.Visible = True
@@ -317,6 +328,7 @@
     End Sub
 
     Private Sub radCrossbreedCat_CheckedChanged(sender As Object, e As EventArgs) Handles radCrossbreedCat.CheckedChanged
+        'If the Crossbreed option is chosen then Only the pedigree options appear
         lblOtherCat.Visible = False
         txtOtherCat.Visible = False
         cboCrossbreedCat.Visible = True
@@ -325,6 +337,7 @@
     End Sub
 
     Private Sub radMixedCat_CheckedChanged(sender As Object, e As EventArgs) Handles radMixedCat.CheckedChanged
+        'If the Mixed Breed option is chosen then Only the pedigree options appear
         lblOtherCat.Visible = False
         txtOtherCat.Visible = False
         cboMixedCat.Visible = True
@@ -343,6 +356,7 @@
         gboAddOns2.Visible = False
         gboCost.Visible = False
         gboAddOnsDog.Visible = False
+        btnNextPage.Visible = False
     End Sub
 
     Private Sub radDog_CheckedChanged(sender As Object, e As EventArgs) Handles radDog.CheckedChanged
@@ -356,18 +370,17 @@
         gboAddOnCat.Visible = False
         gboAddOns2.Visible = False
         gboCost.Visible = False
+        btnNextPage.Visible = False
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtOtherDog.TextChanged
-
-    End Sub
 
     Private Sub cboPedigreeDog_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboPedigreeDog.SelectedIndexChanged
+        'If the option of Other is selected then the user is prompted to enter further details of the dog
         If cboPedigreeDog.Text = "Other" Then
             txtOtherDog.Visible = True
             lblOtherDog.Visible = True
         End If
-
+        'Continue button is hidden until both fields are filled in
         If radPedigreeDog.Checked And cboPedigreeDog.Text <> "" Then
             btnContinueDog.Visible = True
         Else
@@ -376,10 +389,12 @@
     End Sub
 
     Private Sub cboPedigreeCat_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboPedigreeCat.SelectedIndexChanged
+        'If the option of Other is selected then the user is prompted to enter further details of the cat
         If cboPedigreeCat.Text = "Other" Then
             txtOtherCat.Visible = True
             lblOtherCat.Visible = True
         End If
+        'Continue button is hidden until both fields are filled in
         If radPedigreeCat.Checked And cboPedigreeCat.Text <> "" Then
             btnContinueCat.Visible = True
         Else
@@ -388,32 +403,35 @@
     End Sub
 
     Private Sub cboCrossbreedCat_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCrossbreedCat.SelectedIndexChanged
+        'If the option of Other is selected then the user is prompted to enter further details of the cat
         If cboCrossbreedCat.Text = "Other" Then
             txtOtherCat.Visible = True
             lblOtherCat.Visible = True
         Else
             btnContinue.Visible = False
         End If
-
+        'Continue button is hidden until both fields are filled in
         If radCrossbreedCat.Checked And cboCrossbreedCat.Text <> "" Then
             btnContinueCat.Visible = True
         End If
     End Sub
 
     Private Sub cboMixedCat_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMixedCat.SelectedIndexChanged
+        'If the option of Other is selected then the user is prompted to enter further details of the cat
         If cboMixedCat.Text = "Other" Then
             txtOtherCat.Visible = True
             lblOtherCat.Visible = True
         Else
             btnContinue.Visible = False
         End If
-
+        'Continue button is hidden until both fields are filled in
         If radMixedCat.Checked And cboMixedCat.Text <> "" Then
             btnContinueCat.Visible = True
         End If
     End Sub
 
     Private Sub cboCrossbreedDog_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCrossbreedDog.SelectedIndexChanged
+        'Continue button is hidden until both fields are filled in
         If radCrossbreedDog.Checked And cboCrossbreedDog.Text <> "" Then
             btnContinueDog.Visible = True
         Else
@@ -422,6 +440,7 @@
     End Sub
 
     Private Sub cboMixedDog_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMixedDog.SelectedIndexChanged
+        'Continue button is hidden until both fields are filled in
         If radMixedDog.Checked And cboMixedDog.Text <> "" Then
             btnContinueDog.Visible = True
         Else
@@ -430,16 +449,19 @@
     End Sub
 
     Private Sub btnContinueCat_Click(sender As Object, e As EventArgs) Handles btnContinueCat.Click
+        'When the button is clicked the next group box appears
         gboAddOnCat.Visible = True
 
     End Sub
 
     Private Sub btnContinueDog_Click(sender As Object, e As EventArgs) Handles btnContinueDog.Click
+        'When the button is clicked the next group box appears
         gboAddOnsDog.Visible = True
 
     End Sub
 
     Private Sub gboOptionsDog_Enter(sender As Object, e As EventArgs) Handles gboAddOnDog.Enter
+        'When groupBox appears the only the necessary tools for the user appear
         cboGroomingDog.Visible = False
         radSmallDogShort.Visible = False
         radMediumDogShort.Visible = False
@@ -454,12 +476,13 @@
     End Sub
 
     Private Sub cboGroomingDog_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboGroomingDog.SelectedIndexChanged
+        'If the Combo box reads "" then it shows the corresponding radio buttons
         If cboGroomingDog.Text = "Short / Smooth" Then
             radSmallDogShort.Visible = True And radMediumDogShort.Visible = True And radLargeDogShort.Visible = True
         Else
             radSmallDogShort.Visible = False And radMediumDogShort.Visible = False And radLargeDogShort.Visible = False
         End If
-
+        'If the Combo box reads "" then it shows the corresponding radio buttons
         If cboGroomingDog.Text = "Long / Heavy / Curly" Then
             radSmallDogLong.Visible = True And radMediumDogLong.Visible = True And radLargeDogLong.Visible = True
         Else
@@ -469,6 +492,7 @@
     End Sub
 
     Private Sub radHouseDog_CheckedChanged(sender As Object, e As EventArgs) Handles radHouseDog.CheckedChanged
+        'If the radio button is checked then it shows the corresponding radio buttons
         If radHouseDog.Checked Then
             radSmallDogHouse.Visible = True
             radMediumDogHouse.Visible = True
@@ -478,7 +502,7 @@
             radMediumDogHouse.Visible = False
             radLargeDogHouse.Visible = False
         End If
-
+        'if the radio button is checked then the next button is enabled
         If radHouseDog.Checked Then
             btnNextDog.Enabled = True
         Else
@@ -487,12 +511,13 @@
     End Sub
 
     Private Sub radGroomingDog_CheckedChanged(sender As Object, e As EventArgs) Handles radGroomingDog.CheckedChanged
+        'If the radio button is checked then the corresponding combobox appears
         If radGroomingDog.Checked Then
             cboGroomingDog.Visible = True
         Else
             cboGroomingDog.Visible = False
         End If
-
+        'When the radio button is checked then the next button is enabled
         If radHouseDog.Checked Then
             btnNextDog.Enabled = True
         Else
@@ -500,34 +525,19 @@
         End If
     End Sub
 
-    Private Sub gboOptionsCat_Enter(sender As Object, e As EventArgs) Handles gboAddOnCat.Enter
-        radSmallCatGrooming.Visible = False
-        radMediumCatGrooming.Visible = False
-        radSmallCatHouse.Visible = False
-        radMediumCatHouse.Visible = False
-        gboGrooming.Visible = False
-        gboHouse.Visible = False
-    End Sub
-
-    Private Sub radGroomingCat_CheckedChanged(sender As Object, e As EventArgs) Handles radGroomingCat.CheckedChanged
-        gboGrooming.Visible = True
-        gboHouse.Visible = False
-    End Sub
-
-    Private Sub radHouseCat_CheckedChanged(sender As Object, e As EventArgs) Handles radHouseCat.CheckedChanged
-        gboHouse.Visible = True
-        gboGrooming.Visible = False
-    End Sub
-
     Private Sub btnCostDog_Click(sender As Object, e As EventArgs) Handles btnNextDog.Click
+        'When the button is clicked the next groupbox appears
         gboAddOns2.Visible = True
     End Sub
 
-    Private Sub btnCostCat_Click(sender As Object, e As EventArgs) Handles btnNextCat.Click
+    Private Sub btnCostCat_Click(sender As Object, e As EventArgs)
+        'When the button is clicked the next groupbox appears
         gboAddOns2.Visible = True
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnPrice.Click
+        'When the price button is clicked the amount will appear in the text boxes depending on which
+        'radio buttons have been selected prior to clicking the button
 
         gboCost.Visible = True
 
@@ -879,38 +889,44 @@
         ElseIf radPlus.Checked And cboMixedDog.Text = "Large Mongrel (Greater than 20kgs)" Then
             decPricePerDay = decLargeMongrelPP
         End If
-
+        'clearing the text box's
         txtPricePerDay.Clear()
         txtPricePerYear.Clear()
+        'making the price per year = the price per day multiplied by 365
         txtPricePerDay.Text = decPricePerDay
         txtPricePerYear.Text = decPricePerDay * 365
+        'Calculations
         If radGroomingCat.Checked Then
-            txtPricePerYear.Text = (decPricePerDay * 365) + 20
+            decPricePerDay = decPricePerDay + 0.05
+            txtPricePerYear.Text = decPricePerDay * 365
         Else
             txtPricePerYear.Text = decPricePerDay * 365
         End If
 
-        If radMediumCatGrooming.Checked Then
-            txtPricePerYear.Text = (decPricePerDay * 365) + 25
+        If radMediumGroomingCat.Checked Then
+            decPricePerDay = decPricePerDay + 0.07
+            txtPricePerYear.Text = decPricePerDay * 365
         Else
             txtPricePerYear.Text = decPricePerDay * 365
         End If
 
-        If radSmallCatHouse.Checked Then
-            txtPricePerYear.Text = (decPricePerDay * 365) + 14
+        If radSmallHouseCat.Checked Then
+            decPricePerDay = decPricePerDay + 0.04
+            txtPricePerYear.Text = decPricePerDay * 365
         Else
             txtPricePerYear.Text = decPricePerDay * 365
         End If
 
-        If radMediumCatHouse.Checked Then
-            txtPricePerYear.Text = (decPricePerDay * 365) + 14
+        If radMediumHouseCat.Checked Then
+            decPricePerDay = decPricePerDay + 0.04
+            txtPricePerYear.Text = decPricePerDay * 365 + 14
         Else
             txtPricePerYear.Text = decPricePerDay * 365
         End If
 
         If chkEU.Checked Then
             decPricePerDay = decPricePerDay + 1
-            txtPricePerYear.Text = (decPricePerDay * 365)
+            txtPricePerYear.Text = decPricePerDay * 365
         Else
             decPricePerDay = decPricePerDay
             txtPricePerYear.Text = decPricePerDay * 365
@@ -918,155 +934,253 @@
 
         If chkNonEU.Checked Then
             decPricePerDay = decPricePerDay + 1.25
-            txtPricePerYear.Text = (decPricePerDay * 365)
+            txtPricePerYear.Text = decPricePerDay * 365
         Else
             decPricePerDay = decPricePerDay
             txtPricePerYear.Text = decPricePerDay * 365
         End If
 
         If chkInjury.Checked Then
-            txtPricePerYear.Text = (decPricePerDay * 365) * 1.25
+            decPricePerDay = decPricePerDay * 1.25
+            txtPricePerYear.Text = decPricePerDay * 365
         Else
             txtPricePerYear.Text = decPricePerDay * 365
         End If
 
         If chkDental.Checked Then
-            txtPricePerYear.Text = decPricePerDay * 365 + 35
+            decPricePerDay = decPricePerDay + 0.09
+            txtPricePerYear.Text = decPricePerDay * 365
         Else
             txtPricePerYear.Text = decPricePerDay * 365
         End If
 
         If txtPromo.Text = "Bestie" Then
-            txtPricePerYear.Text = decPricePerDay * 365 * 1.15
+            decPricePerDay = decPricePerDay - (decPricePerDay * 0.15)
+            txtPricePerYear.Text = decPricePerDay * 365
         Else
             txtPricePerYear.Text = decPricePerDay * 365
         End If
 
-        If radSmallDog.Checked Then
-            txtPricePerYear.Text = (decPricePerDay * 365) + 45
+        If radSmallGroomingLong.Checked Then
+            decPricePerDay = decPricePerDay + 0.12
+            txtPricePerYear.Text = decPricePerDay * 365
         Else
             txtPricePerYear.Text = decPricePerDay * 365
         End If
 
-        If radMediumDog.Checked Then
-            txtPricePerYear.Text = (decPricePerDay * 365) + 50
+        If radMediumGroomingLong.Checked Then
+            decPricePerDay = decPricePerDay + 0.13
+            txtPricePerYear.Text = decPricePerDay * 365 + 50
         Else
             txtPricePerYear.Text = decPricePerDay * 365
         End If
 
-        If radLargeDog.Checked Then
-            txtPricePerYear.Text = (decPricePerDay * 365) + 55
+        If radLargeGroomingLong.Checked Then
+            decPricePerDay = decPricePerDay + 0.15
+            txtPricePerYear.Text = decPricePerDay * 365 + 55
         Else
             txtPricePerYear.Text = decPricePerDay * 365
         End If
 
-        If radSmallGroomingDog.Checked Then
-            txtPricePerYear.Text = (decPricePerDay * 365) + 25
+        If radSmallGroomingShort.Checked Then
+            decPricePerDay = decPricePerDay + 0.07
+            txtPricePerYear.Text = decPricePerDay * 365
         Else
             txtPricePerYear.Text = decPricePerDay * 365
         End If
 
-        If radMediumGroomingDog.Checked Then
-            txtPricePerYear.Text = (decPricePerDay * 365) + 30
+        If radMediumGroomingShort.Checked Then
+            decPricePerDay = decPricePerDay + 0.08
+            txtPricePerYear.Text = decPricePerDay * 365
         Else
             txtPricePerYear.Text = decPricePerDay * 365
         End If
 
-        If radLargeDogGrooming.Checked Then
-            txtPricePerYear.Text = (decPricePerDay * 365) + 35
+        If radLargeGroomingShort.Checked Then
+            decPricePerDay = decPricePerDay + 0.09
+            txtPricePerYear.Text = decPricePerDay * 365
         Else
             txtPricePerYear.Text = decPricePerDay * 365
         End If
 
-        If radSmallHouseDog2.Checked Then
-            txtPricePerYear.Text = (decPricePerDay * 365) + 18
+        If radSmallDogHouse.Checked Then
+            decPricePerDay = decPricePerDay + 0.05
+            txtPricePerYear.Text = decPricePerDay * 365
         Else
             txtPricePerYear.Text = decPricePerDay * 365
         End If
 
         If radMediumHouseDog.Checked Then
-            txtPricePerYear.Text = (decPricePerDay * 365) + 22
+            decPricePerDay = decPricePerDay + 0.06
+            txtPricePerYear.Text = decPricePerDay * 365
         Else
             txtPricePerYear.Text = decPricePerDay * 365
         End If
 
         If radLargeHouseDog.Checked Then
-            txtPricePerYear.Text = (decPricePerDay * 365) + 28
+            decPricePerDay = decPricePerDay + 0.07
+            txtPricePerYear.Text = decPricePerDay * 365
         Else
             txtPricePerYear.Text = decPricePerDay * 365
         End If
+        'When the price button is clicked then the next page button becomes visible
+        btnNextPage.Visible = True
     End Sub
 
     Private Sub gboCost_Enter(sender As Object, e As EventArgs) Handles gboCost.Enter
+        'making the variable = the text entered into the text box
         txtPricePerDay.Text = decPricePerDay
     End Sub
 
     Private Sub cboGrooming_SelectedIndexChanged(sender As Object, e As EventArgs)
+        'When the combo box reads "" then the corresponding group box appears
         If cboGrooming.Text = "Short / Smooth" Then
-            gboGroomingDogShort.Visible = True
+            gboGroomingShort.Visible = True
         Else
-            gboGroomingDogShort.Visible = False
+            gboGroomingShort.Visible = False
         End If
 
-
+        'When the combo box reads "" then the corresponding group box appears
         If cboGrooming.Text = "Long / Heavy / Curly" Then
-            gboGroomingDogLong.Visible = True
+            gboGroomingLong.Visible = True
         Else
-            gboGroomingDogLong.Visible = False
+            gboGroomingLong.Visible = False
         End If
 
 
     End Sub
 
     Private Sub gboAddOnsDog_Enter(sender As Object, e As EventArgs)
-        gboGroomingDogLong.Visible = False
-        gboGroomingDogShort.Visible = False
+        'When the groupbox is entered the unneccessary tools are hidden from the user
+        gboGroomingLong.Visible = False
+        gboGroomingShort.Visible = False
         gboHouseDog.Visible = False
     End Sub
 
     Private Sub radGroomingDog2_CheckedChanged(sender As Object, e As EventArgs)
+        'When the radio button is checked the neccarry tools for the next stage appear
         cboGrooming.Visible = True
         gboHouseDog.Visible = False
 
     End Sub
 
     Private Sub radHouseDog2_CheckedChanged(sender As Object, e As EventArgs)
+        'When the radio button is checked the neccarry tools for the next stage appear
         cboGrooming.Visible = False
-        gboGroomingDogLong.Visible = False
-        gboGroomingDogShort.Visible = False
+        gboGroomingLong.Visible = False
+        gboGroomingShort.Visible = False
         gboHouseDog.Visible = True
     End Sub
 
     Private Sub btnNextDog2_Click(sender As Object, e As EventArgs)
+        'When the button is clicked the group box appears
         gboAddOns2.Visible = True
     End Sub
 
-    Private Sub radGroomingDog2_CheckedChanged_1(sender As Object, e As EventArgs) Handles radGroomingDog2.CheckedChanged
+    Private Sub radGroomingDog2_CheckedChanged_1(sender As Object, e As EventArgs)
+        'When the radio button is checked the neccarry tools for the next stage appear
         cboGrooming.Visible = True
         gboHouseDog.Visible = False
     End Sub
 
-    Private Sub cboGrooming_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles cboGrooming.SelectedIndexChanged
-        If cboGrooming.Text = "Short / Smooth" Then
-            gboGroomingDogShort.Visible = True
-        Else
-            gboGroomingDogShort.Visible = False
-        End If
-
-        If cboGrooming.Text = "Long / Heavy / Curly" Then
-            gboGroomingDogLong.Visible = True
-        Else
-            gboGroomingDogLong.Visible = False
-        End If
-    End Sub
-
-    Private Sub radHouseDog2_CheckedChanged_1(sender As Object, e As EventArgs) Handles radHouseDog2.CheckedChanged
+    Private Sub radHouseDog2_CheckedChanged_1(sender As Object, e As EventArgs)
+        'When the radio button is checked the neccarry tools for the next stage appear
         gboHouseDog.Visible = True
-        gboGroomingDogLong.Visible = False
-        gboGroomingDogShort.Visible = False
+        gboGroomingLong.Visible = False
+        gboGroomingShort.Visible = False
     End Sub
 
-    Private Sub btnNextDog2_Click_1(sender As Object, e As EventArgs) Handles btnNextDog2.Click
+    Private Sub btnNextDog2_Click_1(sender As Object, e As EventArgs)
+        'When the button is pressed the group box appears
         gboAddOns2.Visible = True
+    End Sub
+
+    Private Sub radHouseCat_CheckedChanged_1(sender As Object, e As EventArgs) Handles radHouseCat.CheckedChanged
+        'When the radio button is checked the neccarry tools for the next stage appear
+        gboHouseCat.Visible = True
+        gboGroomingCat.Visible = False
+    End Sub
+
+    Private Sub radGroomingCat_CheckedChanged_1(sender As Object, e As EventArgs) Handles radGroomingCat.CheckedChanged
+        'When the radio button is checked the neccarry tools for the next stage appear
+        gboGroomingCat.Visible = True
+        gboHouseCat.Visible = False
+    End Sub
+
+    Private Sub btnNextCat_Click(sender As Object, e As EventArgs) Handles btnNextCat.Click
+        'When the button is clicked the group box appears
+        gboAddOns2.Visible = True
+    End Sub
+
+    Private Sub radHouseDog2_CheckedChanged_2(sender As Object, e As EventArgs) Handles radHouseDog2.CheckedChanged
+        'When the radio button is checked the neccarry tools for the next stage appear
+        gboHouseDog.Visible = True
+        cboGrooming.Visible = False
+        gboGroomingLong.Visible = False
+        gboGroomingShort.Visible = False
+    End Sub
+
+    Private Sub radGroomingDog2_CheckedChanged_2(sender As Object, e As EventArgs) Handles radGroomingDog2.CheckedChanged
+        'When the radio button is checked the neccarry tools for the next stage appear
+        cboGrooming.Visible = True
+        gboHouseDog.Visible = False
+    End Sub
+
+    Private Sub cboGrooming_SelectedIndexChanged_2(sender As Object, e As EventArgs) Handles cboGrooming.SelectedIndexChanged
+        'When the combobox reads "" Then the group box appears
+        If cboGrooming.Text = "Short / Smooth" Then
+            gboGroomingShort.Visible = True
+        Else
+            gboGroomingShort.Visible = False
+        End If
+        'When the combobox reads "" Then the group box appears
+        If cboGrooming.Text = "Long / Heavy / Curly" Then
+            gboGroomingLong.Visible = True
+        Else
+            gboGroomingLong.Visible = False
+        End If
+    End Sub
+
+    Private Sub btnNextDog2_Click_2(sender As Object, e As EventArgs) Handles btnNextDog2.Click
+        'When the button is clicked the group box appears
+        gboAddOns2.Visible = True
+
+    End Sub
+
+    Private Sub gboAddOnsDog_Enter_1(sender As Object, e As EventArgs) Handles gboAddOnsDog.Enter
+        'When the group box is entered only the necessary tools appear for the user
+        gboGroomingShort.Visible = False
+        gboGroomingLong.Visible = False
+        gboHouseDog.Visible = False
+        cboGrooming.Visible = False
+    End Sub
+
+    Private Sub gboAddOnCat_Enter(sender As Object, e As EventArgs) Handles gboAddOnCat.Enter
+        'When the group box is entered only the necessary tools appear for the user
+        gboHouseCat.Visible = False
+        gboGroomingCat.Visible = False
+
+    End Sub
+
+    Private Sub btnNextPage_Click(sender As Object, e As EventArgs) Handles btnNextPage.Click
+        'Current form is hidden and the next form appears when button is pressed
+        Me.Visible = False
+        frmUserDetails.Visible = True
+    End Sub
+
+    Private Sub radSmallHouseCat_CheckedChanged(sender As Object, e As EventArgs) Handles radSmallHouseCat.CheckedChanged
+        btnNextCat.Visible = True
+    End Sub
+
+    Private Sub radMediumHouseCat_CheckedChanged(sender As Object, e As EventArgs) Handles radMediumHouseCat.CheckedChanged
+        btnNextCat.Visible = True
+    End Sub
+
+    Private Sub radSmallGroomingCat_CheckedChanged(sender As Object, e As EventArgs) Handles radSmallGroomingCat.CheckedChanged
+        btnNextCat.Visible = True
+    End Sub
+
+    Private Sub radMediumGroomingCat_CheckedChanged(sender As Object, e As EventArgs) Handles radMediumGroomingCat.CheckedChanged
+        btnNextCat.Visible = True
     End Sub
 End Class
